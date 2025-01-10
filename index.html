@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corazones Responsivos</title>
+  <!-- Enlace a Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <canvas id="heartCanvas"></canvas>
+  <div class="teamoluna" id="teAmoLuna">Te amo Luna</div>
+
+  <!-- Enlace a JS de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script>
+    const canvas = document.getElementById("heartCanvas");
+    const ctx = canvas.getContext("2d");
+    const teAmoLuna = document.getElementById("teAmoLuna");
+
+    // Configuración del canvas
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Lista de partículas
+    let particlesArray = [];
+    let clickParticles = [];
+
+    // Generar partículas que rellenan el corazón
+    function createHeartParticles() {
+      particlesArray = [];
+      const heartPoints = 5000; // Más partículas para un relleno denso
+      const size = Math.min(canvas.width, canvas.height) / 40; // Tamaño del corazón
+
+      for (let i = 0; i < heartPoints; i++) {
+        const x = (Math.random() - 0.5) * 2 * size * 16;
+        const y = (Math.random() - 0.5) * 2 * size * 13;
+
+        // Ecuación ajustada del corazón
+        if (
+          Math.pow(x / size / 16, 2) +
+            Math.pow((y / size - Math.sqrt(Math.abs(x / size))) / 13, 2) <=
+          1
+        ) {
+          particlesArray.push({
+            x: canvas.width / 2 + x,
+            y: canvas.height / 2 - y,
+            size: Math.random() * 1 + 0.3, // Tamaño de cada partícula
+            originalX: canvas.width / 2 + x,
+            originalY: canvas.height / 2 - y,
+            dx: 0,
+            dy: 0,
+            color: `hsl(${Math.random() * 10}, 100%, 50%)`, // Muy rojo
+          });
+        }
+      }
+    }
+
+    // Dibujar partículas
+    function drawParticles(particlesArray) {
+      particlesArray.forEach((particle) => {
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.fill();
+      });
+    }
+
+    // Actualizar partículas
+    function updateParticles(particlesArray, mouse) {
+      particlesArray.forEach((particle) => {
+        const dx = particle.x - mouse.x;
+        const dy = particle.y - mouse.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < 100) {
+          particle.dx += dx / 10;
+          particle.dy += dy / 10;
+        } else {
+          particle.dx *= 0.95;
+          particle.dy *= 0.95;
+          particle.x += (particle.originalX - particle.x) * 0.05;
+          particle.y += (particle.originalY - particle.y) * 0.05;
+        }
+
+        particle.x += particle.dx;
+        particle.y += particle.dy;
+      });
+    }
+
+    // Crear partículas de corazones al hacer clic
+    function createClickParticles(x, y) {
+      for (let i = 0; i < 100; i++) {
+        clickParticles.push({
+          x,
+          y,
+          size: Math.random() * 2 + 1,
+          dx: (Math.random() - 0.5) * 10,
+          dy: (Math.random() - 0.5) * 10,
+          life: 100,
+          color: `hsl(${Math.random() * 10}, 100%, 60%)`,
+        });
+      }
+    }
+
+    function updateClickParticles() {
+      clickParticles.forEach((particle, index) => {
+        particle.x += particle.dx;
+        particle.y += particle.dy;
+        particle.life--;
+        if (particle.life <= 0) clickParticles.splice(index, 1);
+      });
+    }
+
+    // Eventos del mouse
+    let mouse = { x: 0, y: 0 };
+    canvas.addEventListener("mousemove", (event) => {
+      mouse.x = event.clientX;
+      mouse.y = event.clientY;
+    });
+
+    // Al hacer clic en "Te amo Luna"
+    teAmoLuna.addEventListener("click", (event) => {
+      const rect = teAmoLuna.getBoundingClientRect();
+      const x = rect.left + rect.width / 2;
+      const y = rect.top + rect.height / 2;
+      createClickParticles(x, y);
+    });
+
+    // Animación
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawParticles(particlesArray);
+      drawParticles(clickParticles);
+      updateParticles(particlesArray, mouse);
+      updateClickParticles();
+      requestAnimationFrame(animate);
+    }
+
+    // Inicialización
+    createHeartParticles();
+    animate();
+
+    // Ajustar tamaño del canvas al cambiar el tamaño de la ventana
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      createHeartParticles();
+    });
+  </script>
+</body>
+</html>
