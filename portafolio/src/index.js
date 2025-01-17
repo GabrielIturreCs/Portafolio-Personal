@@ -36,3 +36,24 @@ function erase() {
 
 // Iniciar la animación de escritura
 typeAndErase();
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Obtener todos los elementos con la clase fade-in
+  const fadeInElements = document.querySelectorAll('.fade-in');
+
+  // Función para verificar si un elemento está en el viewport
+  function checkVisibility() {
+      fadeInElements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+              el.classList.add('visible');
+          }
+      });
+  }
+
+  // Agregar la clase visible a los elementos cuando están en el viewport
+  window.addEventListener('scroll', checkVisibility);
+
+  // Llamar la función al cargar la página para mostrar los elementos ya visibles
+  checkVisibility();
+});

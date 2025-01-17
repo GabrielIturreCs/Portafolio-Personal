@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio Gabriel Iturre</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <div class="flex flex-col items-center justify-center min-h-screen text-center px-6 md:px-0">
+
+<body class="dark:bg-gray-900 text-white font-sans mt-32 transition-all duration-500">
+  <!-- Botón de alternar modo oscuro / claro -->
+
+  <div class="fade-in flex flex-col items-center justify-center min-h-screen text-center px-6 md:px-0 ">
+    <!-- Botón de Modo Oscuro / Claro (Toggle Switch en la esquina derecha) -->
+
     <!-- Heading Section -->
     <h1 class="text-4xl md:text-5xl font-extrabold leading-tight yo-soy">
       Hola, Yo soy<br>
@@ -22,31 +28,174 @@
     <p class="mt-6 text-base md:text-lg max-w-3xl text-gray-300 leading-relaxed">
       Soy un entusiasta del desarrollo frontend, especializado en crear interfaces web dinámicas, intuitivas y visualmente atractivas. Mi enfoque combina diseño y funcionalidad para ofrecer soluciones efectivas. Como estudiante avanzado de Analista Programador, he participado en proyectos colaborativos, donde me esfuerzo por construir experiencias digitales que optimicen la interacción del usuario. Mi compromiso es ofrecer siempre el mejor trabajo posible, buscando resultados sobresalientes y contribuyendo al éxito del equipo.
     </p>
+    <!-- Redes Sociales y Botón -->
+    <div class="flex items-center justify-center space-x-6 mt-8">
+      <!-- Redes Sociales -->
+      <div class="flex items-center space-x-6">
+        <a href="https://www.tiktok.com" class="neon-circle">
+          <img src="images/tik-tok.png" alt="">
+        </a>
+        <a href="https://www.linkedin.com" class="neon-circle">
+          <img src="images/linkedin.png" alt="">
+        </a>
+        <a href="https://www.github.com" class="neon-circle">
+        <img src="images/github (1).png" alt="">
+        </a>
+    
+  </div>
+</div>
+      
+<!-- Botón CV -->
+<div class="mt-8"><a
+  <a 
+  href="https://drive.google.com/file/d/1oTMWRVYqpLIQaFi5DSplztnQxF07HZwU/view?usp=sharing"
+  class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition">
+  Descargar CV
+</a>
+</div>
 
-    <!-- Social Links -->
-    <div class="flex items-center space-x-6 mt-8">
-      <a href="#" class="text-blue-400 hover:text-blue-500">
-        <i class="fab fa-github text-3xl"></i> <!-- GitHub Icon -->
+<!-- Sección Tecnologías -->
+<div class="mt-32 bg-gray-800 rounded-lg shadow-lg p-8 w-full max-w-5xl">
+  <h2 class="text-3xl font-bold text-blue-400">Tecnologías</h2>
+  <div class="grid grid-cols-4 sm:grid-cols-6 gap-6 mt-6">
+    <!-- Aquí puedes agregar las imágenes de las tecnologías -->
+    <div class="flex flex-col items-center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+        <img src="images/html.png" alt="HTML" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
       </a>
-      <a href="#" class="text-blue-400 hover:text-blue-500">
-        <i class="fab fa-instagram text-3xl"></i> <!-- Instagram Icon -->
+      <p class="mt-2 text-sm">HTML</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+        <img src="images/css-3.png" alt="CSS" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
       </a>
-      <a href="#" class="text-blue-400 hover:text-blue-500">
-        <i class="fab fa-linkedin text-3xl"></i> <!-- LinkedIn Icon -->
+      <p class="mt-2 text-sm">CSS</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://angular.io/docs" target="_blank">
+        <img src="images/icons8-angular-500.png" alt="Angular" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
       </a>
+      <p class="mt-2 text-sm">Angular</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://tailwindcss.com/docs" target="_blank">
+        <img src="images/icons8-tailwind-css-240.png" alt="Tailwind" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Tailwind</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+        <img src="images/js.png" alt="JavaScript" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">JavaScript</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://nodejs.org/en/docs/" target="_blank">
+        <img src="images/icons8-nodejs-240.png" alt="NodeJs" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">NodeJs</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://wordpress.org/support/" target="_blank">
+        <img src="images/icons8-wordpress-480.png" alt="WordPress" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">WordPress</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://dev.mysql.com/doc/" target="_blank">
+        <img src="images/icons8-mysql-96.png" alt="MySQL" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">MySQL</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.postgresql.org/docs/" target="_blank">
+        <img src="images/icons8-postgresql-400.png" alt="PostGreSQL" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">PostGreSQL</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.mongodb.com/docs/" target="_blank">
+        <img src="images/icons8-mongodb-a-cross-platform-document-oriented-database-program-96.png" alt="MongoDB" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">MongoDB</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.docker.com/resources/what-container" target="_blank">
+        <img src="images/icons8-docker-logo-96.png" alt="Docker" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Docker</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-física-64.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Electron</p>
+    </div>
+    <!-- Agrega más tecnologías aquí -->
+  </div>
+</div>
+<!-- Sección Últimos Proyectos -->
+<div class="container mx-auto px-15 py-8 mt-32"> <!-- Ajustamos px-10 para reducir el espacio lateral -->
+  <h2 class="text-3xl font-bold text-blue-400 text-center">Últimos Proyectos</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 max-w-5xl mx-auto"> <!-- Ajustamos el ancho máximo -->
+    <!-- Card 1 -->
+    <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center">
+      <a href="https://peluqueriapetit.netlify.app" target="_blank" class="w-full">
+        <img src="images/peluqueriapetitweb.PNG" alt="Proyecto 1" class="rounded-md mb-4 w-full h-48 object-cover shadow-md">
+      </a>
+      <h3 class="text-xl font-semibold text-white text-center">Sitio Web Peluquería Petit</h3>
+      <p class="text-sm text-gray-300 mt-4 text-center">
+        Diseñé y desarrollé el sitio web de Peluquería Petit, enfocándome en una experiencia visual atractiva y funcional para mostrar servicios y generar contacto con clientes de manera efectiva.
+      </p>
+      <!-- Tecnologías usadas -->
+      <div class="flex items-center justify-center space-x-4 mt-4">
+        <div class="flex items-center">
+          <img src="images/html.png" alt="HTML" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">HTML</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/css-3.png" alt="CSS" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">CSS</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/icons8-oreja-480.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">Bootstrap</p>
+        </div>
+      </div>
+      <div class="flex justify-between mt-6 w-full">
+        <a href="https://peluqueriapetit.netlify.app" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition w-full text-center">
+          Ver Sitio Web
+        </a>
+      </div>
     </div>
 
-    <!-- Download CV Button -->
-    <a 
-      href="https://drive.google.com/drive/u/0/folders/1eDdCv8hXgzGEjQEkcFYY6fxdPcZvLmsx"
-      class="mt-10 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition">
-      Descargar CV
-    </a>
+    <!-- Card 2 -->
+    <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center">
+      <a href="#" target="_blank" class="w-full">
+        <img src="images/señal.jpg" alt="Proyecto 2" class="rounded-md mb-4 w-full h-48 object-cover shadow-md">
+      </a>
+      <h3 class="text-xl font-semibold text-white text-center">Proyecto 2</h3>
+      <p class="text-sm text-gray-300 mt-4 text-center">
+        En Construcción...
+      </p>
+      <!-- Tecnologías usadas -->
+      <div class="flex items-center justify-center space-x-4 mt-4">
+        <div class="flex items-center">
+          <img src="images/html.png" alt="Angular" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">Angular</p>
+        </div>
+      </div>
+      <div class="flex justify-between mt-6 w-full">
+        <a href="#" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition w-full text-center">
+          Ver Sitio Web
+        </a>
+      </div>
+    </div>
   </div>
+</div>
 
   <!-- FontAwesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
   <script src="index.js"></script>
 </body>
 </html>

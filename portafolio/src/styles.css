@@ -31,3 +31,43 @@
   .yo-soy {
     animation: slideIn 1s ease-out;
   }
+ /* Redes sociales */
+
+/* Estilo del círculo con efecto neón */
+.neon-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px; /* Tamaño del círculo */
+  height: 48px;
+  border-radius: 50%; /* Hacerlo circular */
+  background: inherit; /* Usar el mismo fondo que el sitio */
+  border: 2px solid transparent; /* Evitar bordes visibles */
+  box-shadow: 0 0 10px 4px rgba(59, 130, 246, 0.5), 
+              0 0 30px 6px rgba(59, 130, 246, 0.8); /* Efecto neón */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: agrandar el círculo y neón más intenso */
+.neon-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 6px rgba(59, 130, 246, 0.7), 
+              0 0 40px 8px rgba(59, 130, 246, 1);
+}
+
+/* Imágenes o íconos dentro del círculo */
+.neon-circle img, .neon-circle svg {
+  width: 60%; /* Tamaño relativo al círculo */
+  height: 60%;
+  border-radius: 50%; /* Hacer íconos circulares si es necesario */
+  object-fit: cover; /* Ajustar imágenes sin deformarlas */
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}

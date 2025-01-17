@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class', // Usa 'media' para basarte en la configuración del sistema o 'class' para alternar manualmente
-  content: ["./src/**/*.{html,js,css}"],
+  content: [
+    "./index.html", // Asegúrate de agregar la ruta de tu archivo HTML
+    "./src/**/*.{html,js,css}" // Asegúrate de que Tailwind también escanee los archivos JS y CSS si los usas
+  ],
 
   theme: {
     extend: {
@@ -11,4 +14,6 @@ module.exports = {
       },
     },
   },
+
+  plugins: [],
 };
