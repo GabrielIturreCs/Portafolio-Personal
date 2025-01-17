@@ -1,0 +1,47 @@
+
+/* Animación para el texto en "yo soy" */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.yo-soy {
+  animation: slideIn 1s ease-out;
+}
+
+/* Animación de escritura */
+.typing {
+  border-right: 3px solid #fff; /* Estilo del cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(20) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Efecto de parpadeo del cursor */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 17ch;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
