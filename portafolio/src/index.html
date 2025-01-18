@@ -555,36 +555,33 @@
       <!-- Campo de Nombre -->
       <div class="mb-4">
         <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Nombre completo</label>
-        <input type="text" id="name" name="name" required
+        <input type="text" name="name" id="name" required
                class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
       <!-- Campo de Correo Electrónico -->
       <div class="mb-4">
         <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Correo Electrónico</label>
-        <input type="email" id="email" name="email" required
+        <input type="email" name="email" id="email" required
                class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
       <!-- Campo de Asunto -->
       <div class="mb-4">
         <label for="subject" class="block text-gray-300 text-sm font-bold mb-2">Asunto</label>
-        <input type="text" id="subject" name="subject" required
+        <input type="text" name="subject" id="subject" required
                class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
       <!-- Campo de Mensaje -->
       <div class="mb-4">
         <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Mensaje</label>
-        <textarea id="message" name="message" rows="5" required
+        <textarea name="message" id="message" rows="5" required
                   class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
       <!-- Botón Enviar -->
       <div class="flex justify-center mt-6">
-       <!-- Botón Enviar -->
-<div class="flex justify-center mt-6" id="Contacto">
-  <button id="submit-button" type="submit"
-          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-8 rounded-full shadow-md transition flex items-center justify-center">
-    <span id="button-text">Enviar</span>
-  </button>
-</div>
+        <button id="submit-button" type="submit"
+                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-8 rounded-full shadow-md transition flex items-center justify-center">
+          <span id="button-text">Enviar</span>
+        </button>
       </div>
       <!-- Campos Ocultos -->
       <input type="hidden" name="_next" value="https://gabrieliturre.netlify.app">
