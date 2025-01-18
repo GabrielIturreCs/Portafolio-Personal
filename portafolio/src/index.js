@@ -62,18 +62,24 @@ document.addEventListener('DOMContentLoaded', function () {
 let lastScrollY = window.scrollY;
 const navbar = document.getElementById('navbar');
 const mobileMenu = document.getElementById('mobile-menu');
+let isMenuOpen = false; // Variable para verificar si el menú está abierto
 
+// Función para ocultar el navbar al hacer scroll (solo en pantallas grandes)
 window.addEventListener('scroll', () => {
-  // Ocultar el navbar al hacer scroll hacia abajo
-  if (window.scrollY > lastScrollY) {
-    navbar.style.transform = 'translateY(-100%)'; // Oculta el navbar
-  } else {
-    navbar.style.transform = 'translateY(0)'; // Muestra el navbar
-  }
+  // Solo ejecutar este código en pantallas grandes (escritorios)
+  if (window.innerWidth > 768) {
+    // Si el menú está abierto, no permitir que el usuario haga scroll
+    if (isMenuOpen) {
+      window.scrollTo(0, lastScrollY); // Bloquea el scroll, manteniendo la posición
+      return; // Detener la ejecución del scroll
+    }
 
-  // Si el menú móvil está abierto, cerrarlo al hacer scroll
-  if (window.scrollY > 50 && mobileMenu.style.transform !== 'translateY(-100%)') {
-    mobileMenu.style.transform = 'translateY(-100%)'; // Oculta el menú móvil
+    // Ocultar el navbar al hacer scroll hacia abajo
+    if (window.scrollY > lastScrollY) {
+      navbar.style.transform = 'translateY(-100%)'; // Oculta el navbar
+    } else {
+      navbar.style.transform = 'translateY(0)'; // Muestra el navbar
+    }
   }
 
   lastScrollY = window.scrollY;
@@ -82,16 +88,40 @@ window.addEventListener('scroll', () => {
 // Funcionalidad para el menú móvil
 const hamburgerBtn = document.getElementById('hamburger-btn');
 const closeMenu = document.getElementById('close-menu');
+const menuLinks = document.querySelectorAll('#mobile-menu a'); // Seleccionar todas las opciones del menú
 
+// Mostrar el menú móvil
 hamburgerBtn.addEventListener('click', () => {
+  mobileMenu.style.transition = 'transform 0.3s ease-in-out'; // Añadir transición suave
   mobileMenu.style.transform = 'translateY(0)'; // Muestra el menú móvil
+  isMenuOpen = true; // Cambiar el estado a abierto
+  document.body.style.overflow = 'hidden'; // Deshabilitar el scroll en el cuerpo
 });
 
+// Cerrar el menú móvil
 closeMenu.addEventListener('click', () => {
+  mobileMenu.style.transition = 'transform 0.3s ease-in-out'; // Añadir transición suave
   mobileMenu.style.transform = 'translateY(-100%)'; // Oculta el menú móvil
+  isMenuOpen = false; // Cambiar el estado a cerrado
+  document.body.style.overflow = 'auto'; // Habilitar el scroll en el cuerpo
 });
 
+// Cerrar el menú móvil al hacer clic en una opción del menú
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.style.transition = 'transform 0.3s ease-in-out'; // Añadir transición suave
+    mobileMenu.style.transform = 'translateY(-100%)'; // Oculta el menú móvil
+    isMenuOpen = false; // Cambiar el estado a cerrado
+    document.body.style.overflow = 'auto'; // Habilitar el scroll en el cuerpo
+  });
+});
 
+// Evitar que se haga scroll mientras el menú esté abierto
+window.addEventListener('touchmove', (e) => {
+  if (isMenuOpen) {
+    e.preventDefault(); // Previene el desplazamiento mientras el menú está abierto
+  }
+});
 // Seleccionar elementos  seccion formulario
 const form = document.getElementById("contact-form");
 const notificationSending = document.getElementById("notification-sending");
