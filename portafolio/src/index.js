@@ -138,3 +138,37 @@ form.addEventListener('submit', (e) => {
     form.submit(); // Enviar el formulario después de restaurar el botón
   }, 3000);
 });
+
+//funcion para que se quede en la sitio web en contacto//
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Previene que el formulario se envíe de manera tradicional
+
+  // Mostrar notificación de que se está enviando
+  document.getElementById("notification-sending").classList.remove("hidden");
+
+  // Recoger los datos del formulario
+  const formData = new FormData(this);
+
+  // Enviar los datos del formulario usando fetch
+  fetch("https://formsubmit.co/gabriel15iturre@gmail.com", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      // Si el envío fue exitoso
+      document.getElementById("notification-sending").classList.add("hidden");
+      document.getElementById("notification-success").classList.remove("hidden");
+
+      // Opcional: Resetea el formulario después de enviarlo
+      document.getElementById("contact-form").reset();
+    } else {
+      // Si hubo un error en el envío
+      alert("Hubo un error al enviar el mensaje.");
+    }
+  })
+  .catch(error => {
+    console.error("Error al enviar el formulario:", error);
+    alert("Hubo un error al enviar el mensaje.");
+  });
+});
