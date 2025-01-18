@@ -58,9 +58,83 @@ document.addEventListener('DOMContentLoaded', function () {
   checkVisibility();
 });
 
-  const hamburgerBtn = document.getElementById('hamburger-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  
-  hamburgerBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
+// Función para ocultar el navbar al hacer scroll
+let lastScrollY = window.scrollY;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > lastScrollY) {
+    navbar.style.transform = 'translateY(-100%)'; // Oculta el navbar
+  } else {
+    navbar.style.transform = 'translateY(0)'; // Muestra el navbar
+  }
+  lastScrollY = window.scrollY;
+});
+
+// Funcionalidad para el menú móvil
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeMenu = document.getElementById('close-menu');
+
+hamburgerBtn.addEventListener('click', () => {
+  mobileMenu.style.transform = 'translateY(0)'; // Muestra el menú móvil
+});
+
+closeMenu.addEventListener('click', () => {
+  mobileMenu.style.transform = 'translateY(-100%)'; // Oculta el menú móvil
+});
+
+
+
+// Seleccionar elementos  seccion formulario
+const form = document.getElementById("contact-form");
+const notificationSending = document.getElementById("notification-sending");
+const notificationSuccess = document.getElementById("notification-success");
+const successSound = document.getElementById("success-sound");
+
+// Manejar envío del formulario
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // Prevenir el envío por defecto
+
+  // Mostrar notificación de "Enviando..."
+  notificationSending.classList.remove("hidden");
+
+  // Simular un retraso para mostrar "Enviado con éxito"
+  setTimeout(() => {
+    notificationSending.classList.add("hidden"); // Ocultar "Enviando..."
+    notificationSuccess.classList.remove("hidden"); // Mostrar "Enviado con éxito"
+    successSound.play(); // Reproducir sonido
+
+    // Ocultar la notificación de éxito después de 3 segundos
+    setTimeout(() => {
+      notificationSuccess.classList.add("hidden");
+    }, 3000);
+
+    // Reiniciar el formulario
+    form.reset();
+  }, 2000);
+});
+
+
+//boton enviar js para el verificado*//
+
+const form2 = document.getElementById('contact-form');
+const submitButton = document.getElementById('submit-button');
+const buttonText = document.getElementById('button-text');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); // Evita el envío automático para mostrar el cambio
+
+  // Cambiar texto del botón a un ícono de check
+  buttonText.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>';
+  submitButton.classList.add('bg-green-500', 'hover:bg-green-600');
+  submitButton.classList.remove('bg-blue-500', 'hover:bg-blue-600');
+
+  // Restaurar el botón tras 3 segundos
+  setTimeout(() => {
+    buttonText.innerHTML = 'Enviar';
+    submitButton.classList.add('bg-blue-500', 'hover:bg-blue-600');
+    submitButton.classList.remove('bg-green-500', 'hover:bg-green-600');
+    form.submit(); // Enviar el formulario después de restaurar el botón
+  }, 3000);
+});
