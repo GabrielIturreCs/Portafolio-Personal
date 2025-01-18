@@ -8,11 +8,23 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
+<header class="fixed top-0 left-0 w-full px-10 py-5 bg-transparent flex justify-between items-center z-100">
+  <!-- Logo -->
+  <div class="text-2xl font-semibold text-white cursor-default">Gabriel</div>
 
+  <!-- Navbar -->
+  <ul class="flex space-x-9">
+    <li><a href="#sobremi" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mi</a></li>
+    <li><a href="#tecnologías" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Tecnologías</a></li>
+    <li><a href="#proyectos" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Proyectos</a></li>
+    <li><a href="#servicios" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Servicios</a></li>
+    <li><a href="#educacion" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Educacion</a></li>
+  </ul>
+</header>
 <body class="dark:bg-gray-900 text-white font-sans mt-32 transition-all duration-500">
   <!-- Botón de alternar modo oscuro / claro -->
 
-  <div class="fade-in flex flex-col items-center justify-center min-h-screen text-center px-6 md:px-0 ">
+  <div class="fade-in flex flex-col items-center justify-center min-h-screen text-center px-6 md:px-0 " id="sobremi">
     <!-- Botón de Modo Oscuro / Claro (Toggle Switch en la esquina derecha) -->
 
     <!-- Heading Section -->
@@ -32,10 +44,10 @@
     <div class="flex items-center justify-center space-x-6 mt-8">
       <!-- Redes Sociales -->
       <div class="flex items-center space-x-6">
-        <a href="https://www.tiktok.com" class="neon-circle">
+        <a href="https://www.tiktok.com/@gapherdev?is_from_webapp=1&sender_device=pcm" class="neon-circle">
           <img src="images/tik-tok.png" alt="">
         </a>
-        <a href="https://www.linkedin.com" class="neon-circle">
+        <a href="https://www.linkedin.com/in/gabriel-iturre-73900626a/" class="neon-circle">
           <img src="images/linkedin.png" alt="">
         </a>
         <a href="https://www.github.com" class="neon-circle">
@@ -55,7 +67,7 @@
 </div>
 
 <!-- Sección Tecnologías -->
-<div class="mt-32 bg-gray-800 rounded-lg shadow-lg p-8 w-full max-w-5xl">
+<div class="mt-32 bg-gray-800 rounded-lg shadow-lg p-8 w-full max-w-5xl" id="tecnologías">
   <h2 class="text-3xl font-bold text-blue-400">Tecnologías</h2>
   <div class="grid grid-cols-4 sm:grid-cols-6 gap-6 mt-6">
     <!-- Aquí puedes agregar las imágenes de las tecnologías -->
@@ -178,16 +190,29 @@
       </a>
       <p class="mt-2 text-sm">Google Analytics</p>
     </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-netlify-externo-una-compañía-de-computación-en-la-nube-que-ofrece-hosting-y-servicios-backend-sin-servidor-para-sitios-web-estáticos-logo-shadow-tal-revivo-100.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Netlify</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-vehículo-de-levitación-magnética-100.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">RailWay</p>
+    </div>
     </div>
 </div>
 <!-- Sección Últimos Proyectos -->
-<div class="container mx-auto px-15 py-8 mt-32"> <!-- Ajustamos px-10 para reducir el espacio lateral -->
+<div class="container mx-auto px-15 py-8 mt-16" id="proyectos">
   <h2 class="text-3xl font-bold text-blue-400 text-center">Últimos Proyectos</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 max-w-5xl mx-auto"> <!-- Ajustamos el ancho máximo -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 max-w-5xl mx-auto">
+    
     <!-- Card 1 -->
-    <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center">
+    <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-xl">
       <a href="https://peluqueriapetit.netlify.app" target="_blank" class="w-full">
-        <img src="images/peluqueriapetitweb.PNG" alt="Proyecto 1" class="rounded-md mb-4 w-full h-48 object-cover shadow-md">
+        <img src="images/peluqueriapetitweb.PNG" alt="Proyecto 1" class="rounded-md mb-4 w-full h-48 object-cover shadow-md transform transition-transform duration-300 hover:scale-110">
       </a>
       <h3 class="text-xl font-semibold text-white text-center">Sitio Web Peluquería Petit</h3>
       <p class="text-sm text-gray-300 mt-4 text-center">
@@ -228,9 +253,9 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center">
+    <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-xl">
       <a href="#" target="_blank" class="w-full">
-        <img src="images/señal.jpg" alt="Proyecto 2" class="rounded-md mb-4 w-full h-48 object-cover shadow-md">
+        <img src="images/señal.jpg" alt="Proyecto 2" class="rounded-md mb-4 w-full h-48 object-cover shadow-md transform transition-transform duration-300 hover:scale-110">
       </a>
       <h3 class="text-xl font-semibold text-white text-center">Proyecto 2</h3>
       <p class="text-sm text-gray-300 mt-4 text-center">
@@ -250,9 +275,212 @@
       </div>
     </div>
   </div>
+ <!-- Sección de Servicios -->
+<div id="servicios" class="mt-16 bg-gray-900  p-8 w-full max-w-6xl mx-auto">
+  <h2 class="text-4xl font-bold text-blue-400 text-center relative">
+      <!-- Ícono izquierdo -->
+      <span class="absolute left-0 top-1/2 transform -translate-y-1/2">
+          <i class="fas fa-star text-blue-400"></i>
+      </span>
+      Servicios de Diseño Web
+      <!-- Ícono derecho -->
+      <span class="absolute right-0 top-1/2 transform -translate-y-1/2">
+          <i class="fas fa-star text-blue-400"></i>
+      </span>
+  </h2>
+  <p class="text-gray-200 text-center mt-4 text-lg">
+      Transformo tus ideas en sitios web atractivos, funcionales y modernos.
+  </p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+      <!-- Tarjeta de servicio 1 -->
+      <div class="group relative bg-gray-800 p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+          <div class="absolute top-4 right-4 text-gray-500 group-hover:text-blue-400 transition duration-300">
+              <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="flex justify-between mb-4">
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-diseño-web-filled-100.png" alt="Ícono móvil" class="w-8 h-8" />
+              </div>
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-curved-arrow-downward-100.png" alt="Ícono servicio 2" class="w-8 h-8" />
+              </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-blue-400 transition duration-300">
+              Diseño Responsivo
+          </h3>
+          <p class="text-gray-300 group-hover:text-gray-200 transition duration-300 mt-2 text-sm">
+              Sitios que se adaptan a cualquier dispositivo, asegurando una experiencia excelente en móviles y escritorio.
+          </p>
+      </div>
+
+      <!-- Tarjeta de servicio 2 -->
+      <div class="group relative bg-gray-800 p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+          <div class="absolute top-4 right-4 text-gray-500 group-hover:text-blue-400 transition duration-300">
+              <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="flex justify-between mb-4">
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-comercio-electrónico-100.png" alt="Ícono carrito" class="w-8 h-8" />
+              </div>
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-curved-arrow-downward-100.png" alt="Ícono servicio 2" class="w-8 h-8" />
+              </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-blue-400 transition duration-300">
+              Funcionalidad E-commerce
+          </h3>
+          <p class="text-gray-300 group-hover:text-gray-200 transition duration-300 mt-2 text-sm">
+              Desarrollo de tiendas en línea con sistemas de pago integrados, optimizadas para aumentar tus ventas.
+          </p>
+      </div>
+
+      <!-- Tarjeta de servicio 3 -->
+      <div class="group relative bg-gray-800 p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+          <div class="absolute top-4 right-4 text-gray-500 group-hover:text-blue-400 transition duration-300">
+              <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="flex justify-between mb-4">
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-seo-100.png" alt="Ícono lupa" class="w-8 h-8" />
+              </div>
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-curved-arrow-downward-100.png" alt="Ícono servicio 2" class="w-8 h-8" />
+              </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-blue-400 transition duration-300">
+              Optimización SEO
+          </h3>
+          <p class="text-gray-300 group-hover:text-gray-200 transition duration-300 mt-2 text-sm">
+              Mejora la visibilidad de tu sitio en motores de búsqueda para atraer más clientes.
+          </p>
+      </div>
+
+      <!-- Tarjeta de servicio 4 -->
+      <div class="group relative bg-gray-800 p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+          <div class="absolute top-4 right-4 text-gray-500 group-hover:text-blue-400 transition duration-300">
+              <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="flex justify-between mb-4">
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-comercio-electrónico-100.png" alt="Ícono carrito" class="w-8 h-8" />
+              </div>
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-curved-arrow-downward-100.png" alt="Ícono servicio 2" class="w-8 h-8" />
+              </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-blue-400 transition duration-300">
+              Desarrollo Frontend
+          </h3>
+          <p class="text-gray-300 group-hover:text-gray-200 transition duration-300 mt-2 text-sm">
+              Experiencia en HTML, CSS, JavaScript y frameworks como React o Tailwind para interfaces modernas.
+          </p>
+      </div>
+
+      <!-- Tarjeta de servicio 5 -->
+      <div class="group relative bg-gray-800 p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+          <div class="absolute top-4 right-4 text-gray-500 group-hover:text-blue-400 transition duration-300">
+              <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="flex justify-between mb-4">
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-spinner-marco-2-96.png" alt="Ícono imágenes" class="w-8 h-8" />
+              </div>
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-curved-arrow-downward-100.png" alt="Ícono servicio 2" class="w-8 h-8" />
+              </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-blue-400 transition duration-300">
+              Carga de Contenido
+          </h3>
+          <p class="text-gray-300 group-hover:text-gray-200 transition duration-300 mt-2 text-sm">
+              Ayuda con la carga de imágenes, videos y textos para asegurar que tu sitio esté completamente funcional.
+          </p>
+      </div>
+  </div>
 </div>
+<!-- Sección Educación -->
+<section class="education-section bgp-8 rounded-lg shadow-lg-gray-900 p-8 w-full max-w-6xl mx-auto mt-8" id="educacion">
+  <h2 class="text-4xl font-bold text-blue-400">Mi Educación</h2>
+  <p class="text-gray-400 mt-4">
+    A lo largo de mi trayectoria he adquirido conocimientos en diversas tecnologías y herramientas que me han permitido crecer como profesional en desarrollo web y programación.
+  </p>
+  
+  <div class="education-cards grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 overflow-y-auto max-h-96 pr-4">
+    <!-- Tarjeta 1 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <p class="text-blue-400 font-semibold text-lg">2024</p>
+      <h3 class="text-2xl font-bold text-white mt-2">TodoCode - HTML y CSS</h3>
+      <div class="flex items-center mt-2">
+        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <p class="text-gray-400">Curso Online</p>
+      </div>
+      <p class="text-gray-300 mt-4">
+        Aprendí HTML y CSS con Luisina. Este curso me permitió fortalecer mis habilidades en diseño web.
+      </p>
+    </div>
 
+    <!-- Tarjeta 2 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <p class="text-blue-400 font-semibold text-lg">2022 - 2025</p>
+      <h3 class="text-2xl font-bold text-white mt-2">Facultad de Ingeniería - UNJu</h3>
+      <div class="flex items-center mt-2">
+        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <p class="text-gray-400">Analista Programador Universitario</p>
+      </div>
+      <p class="text-gray-300 mt-4">
+        Actualmente soy estudiante avanzado, con conocimientos en Angular, bases de datos, C++, JavaScript, Spring Boot, TypeScript, entre otros.
+      </p>
+    </div>
 
+    <!-- Tarjeta 3 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <p class="text-blue-400 font-semibold text-lg">2022</p>
+      <h3 class="text-2xl font-bold text-white mt-2">Argentina Programa</h3>
+      <div class="flex items-center mt-2">
+        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <p class="text-gray-400">JavaScript</p>
+      </div>
+      <p class="text-gray-300 mt-4">
+        Logré aprobar este curso donde aprendí los fundamentos de JavaScript y su aplicación en proyectos interactivos.
+      </p>
+    </div>
+
+    <!-- Tarjeta 4 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <p class="text-blue-400 font-semibold text-lg">2024</p>
+      <h3 class="text-2xl font-bold text-white mt-2">Universidad Desarrollo Web - Udemy</h3>
+      <div class="flex items-center mt-2">
+        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <p class="text-gray-400">FrontEnd Web Developer</p>
+      </div>
+      <p class="text-gray-300 mt-4">
+        Este curso me permitió profundizar en HTML, CSS y JavaScript, incluyendo DOM, eventos, POO y proyectos prácticos como calculadoras y sistemas de administración.
+      </p>
+    </div>
+
+    <!-- Tarjeta 5 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <p class="text-blue-400 font-semibold text-lg">2025</p>
+      <h3 class="text-2xl font-bold text-white mt-2">Universidad Angular - Udemy</h3>
+      <div class="flex items-center mt-2">
+        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <p class="text-gray-400">De Cero a Experto</p>
+      </div>
+      <p class="text-gray-300 mt-4">
+        Aprendí arquitectura Angular, TypeScript, módulos, Firebase y despliegue de aplicaciones en producción, además de varios proyectos prácticos.
+      </p>
+    </div>
+  </div>
+</section>
+<footer class="bg-gray-900 text-gray-400 p-4 w-full mt-20">
+  <div class="container mx-auto flex justify-between items-center">
+    <p class="text-sm">Copyright © 2023 by Codehat | All Rights Reserved.</p>
+    <a href="#top" class="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full hover:bg-blue-500 transition-all duration-300">
+      <!-- Reemplaza esta imagen con la URL de tu imagen -->
+      <img src="images/icons8-up-52.png" alt="Flecha hacia arriba" class="w-6 h-6 animate-bounce">
+    </a>
+  </div>
+</footer>
 
   <!-- FontAwesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

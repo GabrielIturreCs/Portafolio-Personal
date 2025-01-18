@@ -1,39 +1,38 @@
 /* Efecto de parpadeo del cursor */
 .typing::after {
-    content: '|';
-    animation: blink 0.75s step-end infinite;
-  }
-  
-  @keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Animación para el texto en "yo soy" */
-  @keyframes slideIn {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  .yo-soy {
-    animation: slideIn 1s ease-out;
-  }
- /* Redes sociales */
+  content: '|';
+  animation: blink 0.75s step-end infinite;
+}
 
-/* Estilo del círculo con efecto neón */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animación para el texto en "yo soy" */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.yo-soy {
+  animation: slideIn 1s ease-out;
+}
+
+/* Redes sociales */
 .neon-circle {
   position: relative;
   display: flex;
@@ -63,6 +62,7 @@
   border-radius: 50%; /* Hacer íconos circulares si es necesario */
   object-fit: cover; /* Ajustar imágenes sin deformarlas */
 }
+
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -71,3 +71,46 @@
 .fade-in {
   animation: fadeIn 1s ease-in-out;
 }
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0; /* Ajustar padding para que no haya márgenes innecesarios */
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #3b82f6;
+}
+
+/* Ajustes para el body */
+body {
+  margin-top: 100px; /* Espacio para que el contenido no quede tapado por el header fijo */
+  font-family: 'Arial', sans-serif;
+}
+
