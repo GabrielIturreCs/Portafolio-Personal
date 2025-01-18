@@ -61,19 +61,26 @@ document.addEventListener('DOMContentLoaded', function () {
 // Función para ocultar el navbar al hacer scroll
 let lastScrollY = window.scrollY;
 const navbar = document.getElementById('navbar');
+const mobileMenu = document.getElementById('mobile-menu');
 
 window.addEventListener('scroll', () => {
+  // Ocultar el navbar al hacer scroll hacia abajo
   if (window.scrollY > lastScrollY) {
     navbar.style.transform = 'translateY(-100%)'; // Oculta el navbar
   } else {
     navbar.style.transform = 'translateY(0)'; // Muestra el navbar
   }
+
+  // Si el menú móvil está abierto, cerrarlo al hacer scroll
+  if (window.scrollY > 50 && mobileMenu.style.transform !== 'translateY(-100%)') {
+    mobileMenu.style.transform = 'translateY(-100%)'; // Oculta el menú móvil
+  }
+
   lastScrollY = window.scrollY;
 });
 
 // Funcionalidad para el menú móvil
 const hamburgerBtn = document.getElementById('hamburger-btn');
-const mobileMenu = document.getElementById('mobile-menu');
 const closeMenu = document.getElementById('close-menu');
 
 hamburgerBtn.addEventListener('click', () => {
@@ -83,7 +90,6 @@ hamburgerBtn.addEventListener('click', () => {
 closeMenu.addEventListener('click', () => {
   mobileMenu.style.transform = 'translateY(-100%)'; // Oculta el menú móvil
 });
-
 
 
 // Seleccionar elementos  seccion formulario
