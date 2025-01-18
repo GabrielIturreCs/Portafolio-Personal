@@ -57,3 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // Llamar la función al cargar la página para mostrar los elementos ya visibles
   checkVisibility();
 });
+
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
