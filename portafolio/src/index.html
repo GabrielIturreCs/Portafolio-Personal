@@ -25,7 +25,7 @@
 
   <!-- Navbar for large screens -->
   <ul id="navbar-links" class="hidden lg:flex space-x-9">
-    <li><a href="#sobremi" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mi</a></li>
+    <li><a href="#sobremi" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mí</a></li>
     <li><a href="#tecnologías" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Tecnologías</a></li>
     <li><a href="#proyectos" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Proyectos</a></li>
     <li><a href="#servicios" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Servicios</a></li>
@@ -33,9 +33,9 @@
     <li><a href="#Contacto" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Contacto</a></li>
   </ul>
 
-  <!-- Hamburger Menu for small screens -->
+  <!-- Hamburger Menu for small and medium screens -->
   <div class="lg:hidden">
-    <button id="hamburger-btn" class="text-white focus:outline-none">
+    <button id="menu-open-btn" class="text-white focus:outline-none">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
@@ -43,14 +43,14 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-80 transform -translate-y-full transition-transform duration-500">
+  <div id="mobile-nav" class="lg:hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-80 transform -translate-y-full transition-transform duration-500">
     <div class="flex justify-between items-center p-4">
       <div class="text-2xl font-semibold text-white cursor-default">Gabriel</div>
       <!-- Close Button -->
-      <button id="close-menu" class="text-white text-3xl">×</button>
+      <button id="menu-close-btn" class="text-white text-3xl">×</button>
     </div>
     <ul class="flex flex-col items-center space-y-6">
-      <li><a href="#sobremi" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mi</a></li>
+      <li><a href="#sobremi" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mí</a></li>
       <li><a href="#tecnologías" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Tecnologías</a></li>
       <li><a href="#proyectos" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Proyectos</a></li>
       <li><a href="#servicios" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Servicios</a></li>
@@ -88,12 +88,21 @@
 </div>
 
 
-<body class="dark:bg-gray-900 text-white font-sans mt-32 transition-all duration-500">
+<body class="dark:bg-gray-900 text-white font-sans mt-32 transition-all duration-500 relative">
   <!-- Botón de alternar modo oscuro / claro -->
 
   <div class="fade-in flex flex-col items-center justify-center min-h-screen text-center px-6 md:px-0 " id="sobremi">
     <!-- Botón de Modo Oscuro / Claro (Toggle Switch en la esquina derecha) -->
-
+ <!-- Contenedor de estrellas -->
+ <div class="stars">
+  <!-- Estrellas que caerán -->
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <!-- Agregar más divs de .star si deseas más estrellas -->
+</div>
     <!-- Heading Section -->
    
     <h1 class="text-4xl md:text-5xl font-extrabold leading-tight yo-soy">
@@ -136,6 +145,15 @@
 
 <!-- Sección Tecnologías -->
 <div class="mt-32 bg-gray-800 rounded-lg shadow-lg p-8 w-full max-w-5xl">
+  <div class="stars">
+    <!-- Estrellas que caerán -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Agregar más divs de .star si deseas más estrellas -->
+  </div>
   <h2 class="text-3xl font-bold text-blue-400">Tecnologías</h2>
   <div class="grid grid-cols-4 sm:grid-cols-6 gap-6 mt-6">
     <!-- Aquí puedes agregar las imágenes de las tecnologías -->
@@ -274,6 +292,15 @@
 </div>
 <!-- Sección Últimos Proyectos -->
 <div class="container mx-auto px-15 py-8 mt-16" id="proyectos">
+  <div class="stars">
+    <!-- Estrellas que caerán -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Agregar más divs de .star si deseas más estrellas -->
+  </div>
   <h2 class="text-3xl font-bold text-blue-400 text-center">Últimos Proyectos</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 max-w-5xl mx-auto">
     
@@ -345,6 +372,15 @@
   </div>
  <!-- Sección de Servicios -->
 <div id="servicios" class="mt-16 bg-gray-900  p-8 w-full max-w-6xl mx-auto">
+  <div class="stars">
+    <!-- Estrellas que caerán -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Agregar más divs de .star si deseas más estrellas -->
+  </div>
   <h2 class="text-4xl font-bold text-blue-400 text-center relative">
       <!-- Ícono izquierdo -->
       <span class="absolute left-0 top-1/2 transform -translate-y-1/2">
@@ -468,6 +504,15 @@
 </div>
 <!-- Sección Educación -->
 <section class="education-section mt-16 bg-gray-900  p-8 w-full max-w-6xl mx-auto">
+  <div class="stars">
+    <!-- Estrellas que caerán -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Agregar más divs de .star si deseas más estrellas -->
+  </div>
   <h2 class="text-4xl font-bold text-blue-400">Mi Educación</h2>
   <p class="text-gray-400 mt-4">
     A lo largo de mi trayectoria he adquirido conocimientos en diversas tecnologías y herramientas que me han permitido crecer como profesional en desarrollo web y programación.
@@ -546,6 +591,15 @@
 <!-- Sección de Contacto -->
 <!-- Sección de Contacto -->
 <section id="contact" class="min-h-screen flex items-center justify-center bg-gray-900 text-white px-6 py-12">
+  <div class="stars">
+    <!-- Estrellas que caerán -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Agregar más divs de .star si deseas más estrellas -->
+  </div>
   <div class="w-full max-w-2xl bg-gray-800 p-8 rounded-lg shadow-md">
     <h2 class="text-4xl font-bold text-center mb-8 text-white">
       Contáct<span class="text-blue-500">ame</span>
@@ -557,38 +611,50 @@
         <input type="text" name="name" id="name" required
                class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
- 
+
       <!-- Campo de Correo Electrónico -->
       <div class="mb-4">
         <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Correo Electrónico</label>
         <input type="email" name="email" id="email" required
                class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
+
       <!-- Campo de Asunto -->
       <div class="mb-4">
         <label for="subject" class="block text-gray-300 text-sm font-bold mb-2">Asunto</label>
         <input type="text" name="subject" id="subject" required
                class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
+
       <!-- Campo de Mensaje -->
       <div class="mb-4">
         <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Mensaje</label>
         <textarea name="message" id="message" rows="5" required
                   class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
+
       <!-- Botón Enviar -->
       <div class="flex justify-center mt-6">
-        <button id="submit-button" type="submit"
-                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-8 rounded-full shadow-md transition flex items-center justify-center">
+        <button id="submit-button" type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-8 rounded-full shadow-md transition flex items-center justify-center">
           <span id="button-text">Enviar</span>
+          <div id="loading-icon" class="hidden ml-2">
+            <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0z"></path>
+            </svg>
+          </div>
         </button>
       </div>
+
       <!-- Campos Ocultos -->
       <input type="hidden" name="_next" value="https://gabrieliturre.netlify.app">
       <input type="hidden" name="_captcha" value="false">
     </form>
+    <!-- Notificaciones -->
+    <div id="notification" class="hidden mt-6 text-center text-white font-medium p-4 rounded-md"></div>
   </div>
 </section>
+
 <!-- Carteles de Notificación -->
 <div id="notification-sending" class="hidden fixed top-16 right-5 bg-yellow-500 text-white py-2 px-4 rounded-lg shadow-lg">
   Enviando...

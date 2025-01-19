@@ -67,7 +67,7 @@ let isMenuOpen = false; // Variable para verificar si el menú está abierto
 // Función para ocultar el navbar al hacer scroll (solo en pantallas grandes)
 window.addEventListener('scroll', () => {
   // Solo ejecutar este código en pantallas grandes (escritorios)
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 1036) {
     // Si el menú está abierto, no permitir que el usuario haga scroll
     if (isMenuOpen) {
       window.scrollTo(0, lastScrollY); // Bloquea el scroll, manteniendo la posición
@@ -85,40 +85,120 @@ window.addEventListener('scroll', () => {
   lastScrollY = window.scrollY;
 });
 
-// Funcionalidad para el menú móvil
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const closeMenu = document.getElementById('close-menu');
-const menuLinks = document.querySelectorAll('#mobile-menu a'); // Seleccionar todas las opciones del menú
+// Seleccionar elementos
+const openMenuButton = document.getElementById('menu-open-btn');
+const closeMenuButton = document.getElementById('menu-close-btn');
+const mobileNav = document.getElementById('mobile-nav');
+const navLinks = document.querySelectorAll('#mobile-nav a'); // Opciones del menú móvil
+let isMenuVisible = false; // Estado inicial del menú
 
 // Mostrar el menú móvil
-hamburgerBtn.addEventListener('click', () => {
-  mobileMenu.style.transition = 'transform 0.3s ease-in-out'; // Añadir transición suave
-  mobileMenu.style.transform = 'translateY(0)'; // Muestra el menú móvil
-  isMenuOpen = true; // Cambiar el estado a abierto
-  document.body.style.overflow = 'hidden'; // Deshabilitar el scroll en el cuerpo
+function showMobileMenu() {
+  mobileNav.style.transition = 'transform 0.3s ease-in-out';
+  mobileNav.style.transform = 'translateY(0)';
+  isMenuVisible = true;
+  document.body.style.overflow = 'hidden'; // Deshabilitar scroll
+}
+
+// Ocultar el menú móvil
+function hideMobileMenu() {
+  mobileNav.style.transition = 'transform 0.3s ease-in-out';
+  mobileNav.style.transform = 'translateY(-100%)';
+  isMenuVisible = false;
+  document.body.style.overflow = 'auto'; // Habilitar scroll
+}
+
+// Mostrar menú al hacer clic en el botón de hamburguesa
+openMenuButton.addEventListener('click', showMobileMenu);
+
+// Cerrar menú al hacer clic en el botón de cerrar
+closeMenuButton.addEventListener('click', hideMobileMenu);
+
+// Cerrar menú al hacer clic en una opción del menú
+navLinks.forEach(link => {
+  link.addEventListener('click', hideMobileMenu);
 });
 
-// Cerrar el menú móvil
-closeMenu.addEventListener('click', () => {
-  mobileMenu.style.transition = 'transform 0.3s ease-in-out'; // Añadir transición suave
-  mobileMenu.style.transform = 'translateY(-100%)'; // Oculta el menú móvil
-  isMenuOpen = false; // Cambiar el estado a cerrado
-  document.body.style.overflow = 'auto'; // Habilitar el scroll en el cuerpo
+// Detectar tamaño de pantalla para restablecer estado del menú
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1024) {
+    // Si se pasa a pantalla grande, ocultar el menú móvil y habilitar el scroll
+    mobileNav.style.transform = 'translateY(-100%)';
+    document.body.style.overflow = 'auto';
+    isMenuVisible = false;
+  }
 });
 
-// Cerrar el menú móvil al hacer clic en una opción del menú
-menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.style.transition = 'transform 0.3s ease-in-out'; // Añadir transición suave
-    mobileMenu.style.transform = 'translateY(-100%)'; // Oculta el menú móvil
-    isMenuOpen = false; // Cambiar el estado a cerrado
-    document.body.style.overflow = 'auto'; // Habilitar el scroll en el cuerpo
-  });
-});
-
-// Evitar que se haga scroll mientras el menú esté abierto
+// Evitar scroll en pantallas táctiles si el menú está abierto
 window.addEventListener('touchmove', (e) => {
-  if (isMenuOpen) {
-    e.preventDefault(); // Previene el desplazamiento mientras el menú está abierto
+  if (isMenuVisible) {
+    e.preventDefault();
+  }
+});
+
+
+
+
+
+
+
+
+// ================================================================= Mejora UX================================================================= //
+ // ================================================================= Mejora formulario================================================================= //
+
+
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Evita que se envíe automáticamente
+  
+  // Muestra la notificación de "Enviando..."
+  document.getElementById("notification-sending").classList.remove("hidden");
+  
+  // Simula el envío del formulario
+  setTimeout(function() {
+    // Después de 2 segundos (simulando envío), oculta la notificación de "Enviando..." y muestra "Enviado con éxito"
+    document.getElementById("notification-sending").classList.add("hidden");
+    document.getElementById("notification-success").classList.remove("hidden");
+
+    // Aquí es donde puedes enviar el formulario real si todo está funcionando
+    event.target.submit();
+  }, 2000);
+});
+// para el botom el tilde de enviado en el formulario //
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevenir el envío automático del formulario
+
+  var submitButton = document.getElementById('submit-button');
+  var buttonText = document.getElementById('button-text');
+  var loadingIcon = document.getElementById('loading-icon');
+  var notificationSending = document.getElementById('notification-sending');
+  var notificationSuccess = document.getElementById('notification-success');
+
+  // Mostrar icono de carga y deshabilitar el botón
+  loadingIcon.classList.remove('hidden');
+  buttonText.textContent = 'Enviando...';
+  submitButton.disabled = true;
+  notificationSending.classList.remove('hidden');
+
+  // Enviar el formulario
+  this.submit();
+
+  // Después de enviar, mostrar el mensaje de éxito
+  setTimeout(function() {
+    notificationSending.classList.add('hidden');
+    notificationSuccess.classList.remove('hidden');
+    buttonText.textContent = 'Enviado con éxito 🎉';
+  }, 2000); // 3 segundos de espera antes de mostrar el éxito
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const starsContainer = document.querySelector('.stars');
+  for (let i = 0; i < 100; i++) { // Agregar 100 estrellas
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.left = `${Math.random() * 100}vw`; // Posición aleatoria horizontal
+    star.style.animationDuration = `${Math.random() * 5 + 2}s`; // Duración aleatoria
+    star.style.animationDelay = `${Math.random() * 3}s`; // Retraso aleatorio
+    starsContainer.appendChild(star);
   }
 });
