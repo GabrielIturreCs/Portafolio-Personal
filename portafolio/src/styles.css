@@ -180,20 +180,20 @@ body {
     width: 10px;
   }
   .education-cards::-webkit-scrollbar-thumb {
-    background-color: #2563eb; /* Azul para el "pulgar" */
+    background-color: #3b82f6; /* Azul para el "pulgar" */
     border-radius: 5px;
   }
   .education-cards::-webkit-scrollbar-track {
     background-color: #1e293b; /* Color gris oscuro para el track */
   }
   .education-cards::-webkit-scrollbar-button {
-    background-color: #2563eb; /* Azul para los botones */
+    background-color: #3b82f6; /* Azul para los botones */
     height: 16px;
 
   }
   .education-cards::-webkit-scrollbar-button:increment {
-    background-color: #2563eb; /* Botón inferior */
+    background-color: #3b82f6; /* Botón inferior */
   }
   .education-cards::-webkit-scrollbar-button:decrement {
-    background-color: #2563eb; /* Botón superior */
+    background-color: #3b82f6; /* Botón superior */
   }
