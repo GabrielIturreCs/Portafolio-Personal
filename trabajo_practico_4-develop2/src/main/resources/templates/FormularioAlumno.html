@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Alumno</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div data-th-replace="layouts/header :: header"></div>
+    
+    <div class="container mt-5">
+        <div class="form-container">
+            <h1 th:text="${titulo}">Alumno</h1>
+            
+            <form th:action="${edicion} ? @{/alumnos/modificar} : @{/alumnos/agregar}" th:object="${alumno}" method="post">
+                <div class="form-group">
+                    <label for="dni">DNI <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="dni" th:field="*{dni}" pattern="\d+" required>
+                    <small class="form-text text-muted">*Solo se permite numeros. No puntos, ni comas.</small>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nombre" th:field="*{nombre}" pattern="[A-Za-z\s]+" required>
+                    <small class="form-text text-muted">Se recomienda solo letras.</small>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" th:field="*{apellido}" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" th:field="*{email}" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="telefono" th:field="*{telefono}" pattern="\d+" required>
+                    <small class="form-text text-muted">Solamente numeros. no punto, ni comas</small>
+                </div>
+                <div class="form-group">
+                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                    <input type="text" class="form-control" id="fechaNacimiento" th:field="*{fechaNacimiento}" required>
+                </div>
+                <div class="form-group">
+                    <label for="domicilio">Domicilio</label>
+                    <input type="text" class="form-control" id="domicilio" th:field="*{domicilio}" required>
+                </div>
+                <div class="form-group">
+                    <label for="LU">Legajo Universitario (LU) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="LU" th:field="*{LU}" pattern="\d+" required>
+                    <small class="form-text text-muted">Solo numeros</small>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block" th:text="${edicion} ? 'Modificar Alumno' : 'Agregar Alumno'">Agregar Alumno</button>
+            </form>
+        </div>
+    </div>
+    
+    <div data-th-replace="layouts/footer :: footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la página</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header th:replace="~{layouts/header :: header}"></header>
+    <div class="container mt-5">
+        <div class="menu-container">
+            <div class="menu">
+                <h3 class="mb-4">¿Qué deseas hacer?</h3>
+                <a href="/alumnos/listado" class="btn btn-primary">Alta de Alumnos</a>
+                <a href="/carreras/listado" class="btn btn-primary">Alta de Carreras</a>
+                <a href="/materia/listado" class="btn btn-primary">Alta de Materias</a>
+                  <a href="/docentes/listado" class="btn btn-primary">Alta de Docentes</a>
+            </div>
+        </div>
+    </div>
+    <footer th:replace="~{layouts/footer :: footer}"></footer>
+</body>
+</html>

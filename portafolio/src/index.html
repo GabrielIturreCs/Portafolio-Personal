@@ -32,7 +32,7 @@
   
   
     <ul id="navbar-links" class="hidden lg:flex space-x-9">
-      <li><a href="#sobremi" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mí</a></li>
+      <li><a href="#sobremi1" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mí</a></li>
       <li><a href="#tecnologias" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Tecnologías</a></li>
       <li><a href="#proyectos" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Proyectos</a></li>
       <li><a href="#servicios" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Servicios</a></li>
@@ -57,7 +57,7 @@
         <button id="menu-close-btn" class="text-white text-3xl">×</button>
       </div>
       <ul class="flex flex-col items-center space-y-6">
-        <li><a href="#sobremi" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mí</a></li>
+        <li><a href="#sobremi1" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mí</a></li>
         <li><a href="#tecnologías" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Tecnologías</a></li>
         <li><a href="#proyectos" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Proyectos</a></li>
         <li><a href="#servicios" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Servicios</a></li>
@@ -73,7 +73,7 @@
       </svg>
     </button>
     <ul class="space-y-6 text-center">
-      <li><a href="#sobremi" class="text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mi</a></li>
+      <li><a href="#sobremi1" class="text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mi</a></li>
       <li><a href="#tecnologías" class="text-lg font-medium hover:text-blue-500 transition duration-300">Tecnologías</a></li>
       <li><a href="#proyectos" class="text-lg font-medium hover:text-blue-500 transition duration-300">Proyectos</a></li>
       <li><a href="#servicios" class="text-lg font-medium hover:text-blue-500 transition duration-300">Servicios</a></li>
@@ -86,7 +86,7 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="lg:hidden absolute top-0 right-0 w-full bg-transparent z-50 hidden">
     <ul class="flex flex-col space-y-6 px-10 py-5 bg-black text-white">
-      <li><a href="#sobremi" class="text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mi</a></li>
+      <li><a href="#sobremi1" class="text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mi</a></li>
       <li><a href="#tecnologías" class="text-lg font-medium hover:text-blue-500 transition duration-300">Tecnologías</a></li>
       <li><a href="#proyectos" class="text-lg font-medium hover:text-blue-500 transition duration-300">Proyectos</a></li>
       <li><a href="#servicios" class="text-lg font-medium hover:text-blue-500 transition duration-300">Servicios</a></li>
@@ -109,8 +109,10 @@
 
 </div>
     <!-- Heading Section -->
-   
-    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight yo-soy">
+    <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg">
+      <img src="images/IMG_20230705_114537_019~2 (1).jpg" alt="Gabriel Iturre" class="w-full h-full object-cover">
+    </div>
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight yo-soy mt-10" >
       Hola, Yo soy<br>
       <span class="text-blue-500">Gabriel <span class="text-blue-300">Iturre</span></span>
     </h1>
@@ -140,13 +142,57 @@
 </div>
       
 <!-- Botón CV -->
-<div class="mt-8"><a
+<div class="mt-8 flex flex-col md:flex-row gap-4">
+  <!-- Botón Descargar CV -->
   <a 
-  href="https://drive.google.com/file/d/1oTMWRVYqpLIQaFi5DSplztnQxF07HZwU/view?usp=sharing"
-  class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition"  target="_blank">
-  Descargar CV
-</a>
+    href="https://drive.google.com/file/d/1oTMWRVYqpLIQaFi5DSplztnQxF07HZwU/view?usp=sharing"
+    target="_blank"
+    class="w-full md:w-auto py-3 px-8 text-center font-bold rounded-lg bg-blue-800 text-white shadow-md transition duration-300 hover:bg-blue-700">
+    Descargar CV
+  </a>
+
+  <!-- Botón con email y modal al hacer clic -->
+  <div class="relative w-full md:w-auto">
+    <button 
+      id="emailButton"
+      onclick="toggleModal()"
+      class="block py-3 px-8 text-center font-bold rounded-lg bg-gray-700 text-white shadow-md transition duration-300 hover:bg-gray-600 select-none">
+      gabriel13iturre@gmail.com
+    </button>
+
+    <!-- Modal que se muestra al hacer clic -->
+    <div id="emailModal" class="absolute left-4 top-full mt-2 w-max p-4 bg-gray-900 border border-gray-700 rounded-lg shadow-lg hidden">
+      <a href="mailto:gabriel13iturre@gmail.com" class="block text-sm text-blue-400 hover:underline mb-2">
+        Abrir Gmail
+      </a>
+      <button onclick="copyEmail()" class="block text-sm text-blue-400 hover:underline">
+        Copiar email
+      </button>
+    </div>
+  </div>
 </div>
+
+<script>
+  function copyEmail() {
+    navigator.clipboard.writeText("gabriel13iturre@gmail.com").then(() => {
+      alert("Correo copiado al portapapeles");
+    });
+  }
+
+  function toggleModal() {
+    const modal = document.getElementById('emailModal');
+    modal.classList.toggle('hidden');
+  }
+
+  // Cierra el modal si se hace clic fuera del botón o modal
+  document.addEventListener('click', function(event) {
+    const modal = document.getElementById('emailModal');
+    const button = document.getElementById('emailButton');
+    if (!button.contains(event.target) && !modal.contains(event.target)) {
+      modal.classList.add('hidden');
+    }
+  });
+</script>
 
 <!-- Sección Tecnologías -->
 <div class="mt-32 bg-gray-800 rounded-lg shadow-lg p-8 w-full max-w-5xl" id="tecnologias">
@@ -351,29 +397,48 @@
         </a>
       </div>
     </div>
-
-    <!-- Card 2 -->
-    <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-xl">
-      <a href="#" target="_blank" class="w-full">
-        <img src="images/señal.jpg" alt="Proyecto 2" class="rounded-md mb-4 w-full h-48 object-cover shadow-md transform transition-transform duration-300 hover:scale-110">
-      </a>
-      <h3 class="text-xl font-semibold text-white text-center">Proyecto 2</h3>
-      <p class="text-sm text-gray-300 mt-4 text-center">
-        En Construcción...
-      </p>
-      <!-- Tecnologías usadas -->
-      <div class="flex flex-wrap items-center justify-center gap-4 mt-4">
-        <div class="flex items-center">
-          <img src="images/html.png" alt="Angular" class="w-6 h-6 mr-2">
-          <p class="text-sm text-gray-300">Angular</p>
-        </div>
-      </div>
-      <div class="flex justify-between mt-6 w-full">
-        <a href="#" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition w-full text-center">
-          Ver Sitio Web
-        </a>
-      </div>
+<!-- Card 2 -->
+<div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-xl">
+  <a href="https://tusitioweb.com" target="_blank" class="w-full">
+    <img src="images/postulate.PNG" alt="Portal de Empleos" class="rounded-md mb-4 w-full h-48 object-cover shadow-md transform transition-transform duration-300 hover:scale-110">
+  </a>
+  <h3 class="text-xl font-semibold text-white text-center">Portal de Empleos</h3>
+  <p class="text-sm text-gray-300 mt-4 text-center">
+    Encuentra las mejores oportunidades laborales y postúlate fácilmente desde una plataforma diseñada para conectar talento con empresas líderes en el sector.
+  </p>
+  <!-- Tecnologías usadas -->
+  <div class="flex flex-wrap items-center justify-center gap-4 mt-4">
+    <div class="flex items-center">
+      <img src="images/html.png" alt="HTML" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">HTML</p>
     </div>
+    <div class="flex items-center">
+      <img src="images/css-3.png" alt="CSS" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">CSS</p>
+    </div>
+    <div class="flex items-center">
+      <img src="images/icons8-oreja-480.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">Bootstrap</p>
+    </div>
+    <div class="flex items-center">
+      <img src="images/js.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">JavaScript</p>
+    </div>
+    <div class="flex items-center">
+      <img src="images/icons8-figura-240.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">Figma</p>
+    </div>
+    <div class="flex items-center">
+      <img src="images/icons8-google-analitico-500.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">Google Analytics</p>
+    </div>
+  </div>
+  <div class="flex justify-between mt-6 w-full">
+    <a href="https://empleoflash.netlify.app/" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition w-full text-center">
+      Ver Sitio Web
+    </a>
+  </div>
+</div>
   </div>
  <!-- Sección de Servicios -->
 <div id="servicios" class="mt-16 bg-gray-900  p-8 w-full max-w-6xl mx-auto">
@@ -507,8 +572,109 @@
       </div>
   </div>
 </div>
+<!-- SECCIÓN: MI HISTORIA -->
+<div class="fade-in min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left px-6 md:px-0" id="mi-historia">
+  
+  <!-- Contenedor de estrellas (decoración) -->
+  <div class="stars">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+
+  <!-- Foto y botones/redes sociales -->
+  <div class="md:w-1/3 flex flex-col items-center mb-8 md:mb-0">
+    <div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg">
+      <img src="images/IMG_20230705_114537_019~2 (1).jpg" alt="Gabriel Iturre" class="w-full h-full object-cover">
+    </div>
+
+    <!-- Botones debajo de la foto -->
+    <div class="mt-6 flex flex-col md:flex-row gap-4 w-full justify-center">
+      <a 
+        href="https://drive.google.com/file/d/1oTMWRVYqpLIQaFi5DSplztnQxF07HZwU/view?usp=sharing"
+        target="_blank"
+        class=" py-3 px-8 text-center font-bold rounded-lg bg-blue-800  text-white shadow-md transition duration-300 hover:bg-blue-700 block mt-2">
+        Curriculum
+      </a>
+      
+      <a 
+      href="https://gabrieliturre.hashnode.dev/" target="_blank"
+      class=" py-3 px-8 text-center font-bold rounded-lg bg-gray-700 text-white shadow-md transition duration-300 hover:bg-gray-600 block mt-2">
+      Blog
+    </a>  
+
+    </div>
+  
+    <!-- Redes Sociales debajo de los botones -->
+    <div class="flex items-center space-x-6 mt-6 justify-center md:justify-center">
+      <a href="https://www.tiktok.com/@gapherdev?is_from_webapp=1&sender_device=pcm" class="neon-circle" target="_blank">
+        <img src="images/tik-tok.png" alt="TikTok">
+      </a>
+      <a href="https://www.linkedin.com/in/gabriel-iturre-73900626a/" class="neon-circle" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.github.com" class="neon-circle" target="_blank">
+        <img src="images/github (1).png" alt="GitHub">
+      </a>
+    </div>
+  </div>
+
+<!-- Texto a la derecha -->
+<div  class="md:w-1/2 md:pl-10 flex flex-col items-center md:items-start" id="sobremi1">
+  <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-center text-white mt-4">
+    Sobre <span class="text-blue-500">mí</span>
+  </h1>
+    
+    <p class="mt-6 text-base md:text-lg max-w-3xl text-gray-300 leading-relaxed">
+      Desde pequeño, la tecnología ha sido una constante en mi vida, rodeado de computadoras y dispositivos electrónicos. Mi curiosidad por entender cómo funcionaban las cosas detrás de la pantalla me llevó a interesarme por la programación. Mis primeros proyectos, aunque sencillos, me hicieron darme cuenta de que mi verdadera pasión era crear. Con el tiempo, decidí ingresar a la Universidad Nacional de Jujuy para estudiar Ingeniería, buscando una formación sólida en el desarrollo de software. Pero siempre fui un autodidacta, por lo que complementé mis estudios con cursos en plataformas como Udemy y Argentina Programa. Aprendí tecnologías como HTML, CSS, JavaScript, Angular y Docker, herramientas que han sido clave en mi crecimiento profesional.
+
+      A lo largo de este camino, he enfrentado desafíos y momentos de frustración, pero cada obstáculo ha sido una oportunidad para aprender. La programación no es solo dominar un lenguaje, sino desarrollar una mentalidad de resolución de problemas, y eso es algo que sigo cultivando todos los días.
+      
+      Además, los videojuegos, especialmente Dota 2, han sido una fuente de inspiración. La estrategia, la toma de decisiones y el trabajo en equipo en el juego se asemejan a los retos que enfrento al desarrollar software: pensar rápido, adaptarse y encontrar la mejor solución con los recursos disponibles.
+      
+      Hoy, al mirar atrás, veo cuánto he crecido. De ser un joven curioso por las computadoras, he pasado a convertirme en un programador en constante evolución, enfocado en un futuro en la industria del desarrollo web. Mi objetivo es claro: crear soluciones innovadoras y trabajar en un equipo que comparta mi pasión por la tecnología. Sé que aún tengo mucho por aprender, pero cada día me esfuerzo por mejorar, seguir explorando y avanzar en mi camino profesional.
+    </p>
+  </div>
+</div>
+<section class="my-16">
+  <h2 class="text-5xl font-bold text-blue-400 justify-center mt-4 ml-4">Publicaciones del blog</h2>
+<br>
+<br><br>
+
+  <!-- Contenedor de los postes -->
+  <div class="flex flex-col items-center gap-8">
+    <!-- Post 1 -->
+    <div class="flex flex-col md:flex-row items-center gap-6 bg-gray-800 p-6 rounded-lg shadow-xl hover:bg-gray-700 transition-all duration-300 max-w-5xl w-full">
+      <!-- Imagen -->
+      <a href="https://gabrieliturre.hashnode.dev/creando-el-primer-sitio-web-de-una-peluqueria-en-palpala-la-historia-de-petit"  class="w-full md:w-1/3" target="_blank"  >
+        <img src="images/petittt.PNG" alt="Imagen Post 1" class="w-full h-56 object-cover rounded-lg shadow-lg">
+      </a>
+      
+      <!-- Texto del post -->
+      <div class="w-full md:w-2/3 mt-4 md:mt-0">
+        <h3 class="text-2xl font-bold text-white mt-2">Creando el Primer Sitio Web de una Peluquería en Palpalá: La Historia de Petit</h3>
+        <p class="mt-6 text-base md:text-lg text-gray-300 leading-relaxed">Uno de los mayores problemas que enfrentaba la peluquería era la organización de los turnos. Antes, los clientes tenían que llamar o ir en persona para reservar. Diseñé la web para que la gente pudiera encontrar fácilmente la ubicación y supiera que era obligatorio reservar un turno, lo que redujo cancelaciones de último momento y optimizó el trabajo.</p>
+        <a 
+          href="https://gabrieliturre.hashnode.dev/creando-el-primer-sitio-web-de-una-peluqueria-en-palpala-la-historia-de-petit" target="_blank" 
+          class="py-3 px-6 text-center font-semibold rounded-lg bg-blue-600 text-white shadow-md transition duration-300 hover:bg-blue-500 mt-4 inline-block">
+          Leer más &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<br>
+
+</section>
+<!-- FIN SECCIÓN: MI HISTORIA -->
 <!-- Sección Educación -->
 <section class="education-section mt-16 bg-gray-900  p-8 w-full max-w-6xl mx-auto" id="educacion">
+
+  
   <div class="stars">
     <!-- Estrellas que caerán -->
     <div class="star"></div>
@@ -518,7 +684,7 @@
     <div class="star"></div>
     <!-- Agregar más divs de .star si deseas más estrellas -->
   </div>
-  <h2 class="text-4xl font-bold text-blue-400">Mi Educación</h2>
+  <h2 class="text-5xl font-bold text-blue-400">Mi Educación</h2>
   <p class="text-gray-400 mt-4">
     A lo largo de mi trayectoria he adquirido conocimientos en diversas tecnologías y herramientas que me han permitido crecer como profesional en desarrollo web y programación.
   </p>
@@ -590,9 +756,47 @@
     </div>
   </div>
 </section>
+<div class="text-center my-12">
+  <br>
+  <br>
+  <h1 class="text-4xl font-semibold mb-4">¡Hablemos! 📣</h1>
+  <p class="text-lg mb-6">Puedes enviarme un correo, mandarme un mensaje en LinkedIn, o si prefieres, usar el formulario de contacto abajo.</p>
+
+  <!-- Botones de contacto -->
+  <div class="mt-8 flex flex-col md:flex-row gap-4 justify-center">
+    <!-- Botón Enviar mensaje por LinkedIn -->
+    <a 
+      href="https://www.linkedin.com/in/gabriel-iturre-73900626a/"
+      target="_blank"
+      class="w-full md:w-auto py-3 px-8 text-center font-bold rounded-lg bg-blue-800 text-white shadow-md transition duration-300 hover:bg-blue-700">
+      Envíame un mensaje por LinkedIn
+    </a>
+
+    <!-- Botón con email -->
+    <button 
+      id="emailButton"
+      onclick="copyEmail()"
+      class="block py-3 px-8 text-center font-bold rounded-lg bg-gray-700 text-white shadow-md transition duration-300 hover:bg-gray-600 select-none">
+      gabriel13iturre@gmail.com
+    </button>
+  </div>
+</div>
+
+<!-- Script para copiar el email -->
+<script>
+  function copyEmail() {
+    const email = "gabriel13iturre@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      alert("Correo copiado al portapapeles.");
+    }).catch(err => {
+      alert("Hubo un problema al copiar el correo.");
+    });
+  }
+</script>
 
 <!-- Sección de Contacto -->
 <section id="contacto" class="min-h-screen flex items-center justify-center bg-gray-900 text-white px-6 py-12">
+  
   <div class="stars">
     <!-- Estrellas que caerán -->
     <div class="star"></div>

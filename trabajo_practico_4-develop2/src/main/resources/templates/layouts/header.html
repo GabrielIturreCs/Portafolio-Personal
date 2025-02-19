@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head th:fragment="header">
+    <meta charset="UTF-8">
+    <title data-th-text="${titulo}">Insert title here</title>
+    <meta name="viewport" content= "width=dedvice-width,initial-scale=1">
+    <link th:rel="stylesheet" data-th-href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <link th:rel="stylesheet" data-th-href="@{/css/style.css}">
+</head>
+<body>
+<header th:fragment="header">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: #005E7D">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" target="_blank" style="color: #fff; font-weight: bold;">Facultad Ingeniería Parte 1 tp4</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent; border: none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/inicio" style="color: #fff; padding: 15px 20px; border: 1px solid #fff; border-radius: 5px; font-weight: bold;">Parte2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/carreras/listado" style="color: #fff; padding: 15px 20px; border: 1px solid #fff; border-radius: 5px; font-weight: bold;">Carreras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/alumnos/listado" style="color: #fff; padding: 15px 20px; border: 1px solid #fff; border-radius: 5px; font-weight: bold;">Alumnos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/materia/listado" style="color: #fff; padding: 15px 20px; border: 1px solid #fff; border-radius: 5px; font-weight: bold;">Materias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/docentes/listado" style="color: #fff; padding: 15px 20px; border: 1px solid #fff; border-radius: 5px; font-weight: bold;">Docentes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+</body>
+</html>

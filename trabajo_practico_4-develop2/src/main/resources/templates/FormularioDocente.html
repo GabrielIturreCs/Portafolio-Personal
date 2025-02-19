@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Nuevo Docente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div th:replace="layouts/header :: header"></div>
+    
+    <div class="container mt-5">
+        <div class="form-container">
+            <h1 th:text="${titulo}">Nuevo Docente</h1>
+            
+            <form th:action="${edicion} ? @{/docentes/modificar} : @{/docentes/guardar}" th:object="${docente}" method="post">
+                <div class="form-group">
+                    <label for="legajo">Legajo:</label>
+                    <input type="text" class="form-control" id="legajo" th:field="*{legajo}" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" th:field="*{nombre}" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" class="form-control" id="apellido" th:field="*{apellido}" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" th:field="*{email}" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" class="form-control" id="telefono" th:field="*{telefono}" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" th:text="${edicion} ? 'Modificar Docente' : 'Guardar Docente'">Guardar Docente</button>
+            </form>
+        </div>
+    </div>
+    
+    <div th:replace="layouts/footer :: footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

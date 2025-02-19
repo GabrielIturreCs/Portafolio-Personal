@@ -1,0 +1,97 @@
+@charset "ISO-8859-1";
+   /**formulariosEstilos**/
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #005E7D;
+        }
+        .form-group label {
+            font-weight: bold;
+            color: #005E7D;
+        }
+        .form-control {
+            border-color: #005E7D;
+        }
+        .btn-primary, .btn-secondary {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #005E7D;
+            border-color: #005E7D;
+        }
+        .btn-primary:hover {
+            background-color: #004a63;
+            border-color: #004a63;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+       /**ParaListarLoGuardado**/ 
+               .table th, .table td {
+            vertical-align: middle;
+        }
+        .btn-custom {
+            background-color: #005E7D;
+            color: white;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #004a63;
+        }
+        
+        /**Sus estilos del Main.html**/
+                /* Estilos personalizados para el menú */
+        body {
+            background-color: #f8f9fa; /* Fondo del body */
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            border: 1px solid #ced4da; /* Borde del contenedor */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 20px; /* Espaciado interno */
+            background-color: #e9ecef; /* Fondo gris */
+        }
+
+        .menu {
+            text-align: center;
+        }
+
+        .menu a {
+            display: inline-block;
+            margin-bottom: 10px;
+            width: 200px;
+            padding: 15px;
+            border-radius: 5px; /* Bordes cuadrados */
+            background-color: #007bff; /* Fondo resaltado */
+            color: #fff; /* Texto blanco */
+            text-decoration: none; /* Sin subrayado */
+        }
+
+        .menu a:hover {
+            background-color: #0056b3; /* Color de fondo al pasar el ratón */
+        }
+        
+        
+        
+        

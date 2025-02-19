@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Materia</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div data-th-replace="layouts/header :: header"></div>
+    <div class="container mt-5">
+        <div class="form-container">
+            <h1>Nueva Materia</h1>
+            
+            <form action="#" th:action="@{/materia/guardar}" th:object="${materia}" method="post">
+                <div class="form-group">
+                    <label for="codigo">Código</label>
+                    <input type="text" class="form-control" id="codigo" th:field="*{codigo}" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <select class="form-control" id="nombre" th:field="*{nombre}" required>
+                        <option value="analisis matematico">Análisis Matemático</option>
+                        <option value="algebra">Álgebra</option>
+                        <option value="programacion visual">Programación Visual</option>
+                        <option value="servicios web">Servicios Web</option>
+                        <option value="fisica">Física</option>
+                        <option value="quimica">Química</option>
+                        <option value="estatica">Estática</option>
+                        <option value="dinamica">Dinámica</option>
+                        <option value="mecanica de fluidos">Mecánica de Fluidos</option>
+                        <option value="termodinamica">Termodinámica</option>
+                        <option value="circuitos electricos">Circuitos Eléctricos</option>
+                        <option value="electronica digital">Electrónica Digital</option>
+                        <option value="base de datos">Base de Datos</option>
+                        <option value="sistemas operativos">Sistemas Operativos</option>
+                        <option value="redes de computadoras">Redes de Computadoras</option>
+                        <option value="inteligencia artificial">Inteligencia Artificial</option>
+                        <option value="ingenieria de software">Ingeniería de Software</option>
+                        <option value="administracion de proyectos">Administración de Proyectos</option>
+                        <option value="economia">Economía</option>
+                        <option value="gestion empresarial">Gestión Empresarial</option>
+            
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="curso">Curso</label>
+                    <input type="text" class="form-control" id="curso" th:field="*{curso}" required>
+                </div>
+                <div class="form-group">
+                    <label for="cantidadHoras">Cantidad de Horas</label>
+                    <input type="number" class="form-control" id="cantidadHoras" th:field="*{cantidadHoras}" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalidad">Modalidad</label>
+                    <select class="form-control" id="modalidad" th:field="*{modalidad}" required>
+                        <option value="virtual">Virtual</option>
+                        <option value="presencial">Presencial</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="docenteNombre">Docente</label>
+                    <select class="form-control" id="docenteNombre" th:field="*{docente.nombre}" required>
+                        <option value="perez">Perez</option>
+                        <option value="juan carlos">Juan Carlos</option>
+                        <option value="apaza">Apaza</option>
+                        <option value="sosa">Sosa</option>
+                        <option value="liberatori">Liberatori</option>
+                        <option value="vega">Vega</option>
+                        <option value="brouchi">Brouchi</option>
+                        <option value="tarifa">Tarifa</option>
+                        <option value="maxi">Maxi</option>
+                        <option value="coronel">Coronel</option>
+                        <option value="torres">Torres</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="carrera">Carrera</label>
+                    <select class="form-control" id="carrera" th:field="*{carrera}" required>
+                        <option value="ingenieria civil">Ingeniería Civil</option>
+                        <option value="ingenieria en sistemas">Ingeniería en Sistemas</option>
+                        <option value="ingenieria industrial">Ingeniería Industrial</option>
+                        <option value="ingenieria quimica">Ingeniería Química</option>
+                        <option value="ingenieria electronica">Ingeniería Electrónica</option>
+                        <option value="ingenieria electromecanica">Ingeniería Electromecánica</option>
+                        <option value="bioingenieria">Bioingeniería</option>
+                        <option value="ingenieria mecanica">Ingeniería Mecánica</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Guardar Materia</button>
+            </form>
+        </div>
+    </div>
+    <div data-th-replace="layouts/footer :: footer"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

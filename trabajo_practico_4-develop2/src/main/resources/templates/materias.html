@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Listado de Materias</title>
+    <!-- Incluye la hoja de estilos de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Incluye el encabezado desde un archivo separado -->
+    <div data-th-replace="layouts/header :: header"></div>
+    
+    <div class="container mt-5">
+        <!-- Título principal de la página, se establece dinámicamente con Thymeleaf -->
+        <h1 class="mb-4 text-primary text-center" th:text="${titulo}"></h1>
+        <!-- Botón para agregar una nueva materia -->
+        <a class="btn btn-primary mb-3" th:href="@{/materia/nuevo}" role="button">Agregar Nueva Materia</a>
+        
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <!-- Encabezado de la tabla -->
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Curso</th>
+                    <th>Cantidad de Horas</th>
+                    <th>Modalidad</th>
+                    <th>Docente</th>
+                    <th>Carrera</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Itera sobre la colección de materias y genera una fila para cada materia -->
+                <tr th:each="materia : ${materias}">
+                    <!-- Celda para el código de la materia -->
+                    <td th:text="${materia.codigo}">Código</td>
+                    <!-- Celda para el nombre de la materia -->
+                    <td th:text="${materia.nombre}">Nombre</td>
+                    <!-- Celda para el curso de la materia -->
+                    <td th:text="${materia.curso}">Curso</td>
+                    <!-- Celda para la cantidad de horas de la materia -->
+                    <td th:text="${materia.cantidadHoras}">Cantidad de Horas</td>
+                    <!-- Celda para la modalidad de la materia -->
+                    <td th:text="${materia.modalidad}">Modalidad</td>
+                    <!-- Celda para el nombre del docente de la materia -->
+                    <td th:text="${materia.docente.nombre}">Docente</td>
+                    <!-- Celda para la carrera de la materia -->
+                    <td th:text="${materia.carrera}">Carrera</td>
+                    <!-- Celdas para los botones de acciones (Editar y Eliminar) -->
+                    <td>
+                        <a th:href="@{'/materia/modificar/' + ${materia.codigo}}" class="btn btn-warning btn-sm">Editar</a>
+                        <a th:href="@{'/materia/eliminar/' + ${materia.codigo}}" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Incluye el pie de página desde un archivo separado -->
+    <div data-th-replace="layouts/footer :: footer"></div>
+
+    <!-- Incluye las bibliotecas de JavaScript necesarias para Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Listado de Alumnos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div data-th-replace="layouts/header :: header"></div>
+    
+    <div class="container mt-5">
+        <h1 class="mb-4 text-primary text-center" th:text="${titulo}"></h1>
+        <a class="btn btn-primary mb-3" th:href="@{/alumnos/nuevo}" role="button">Agregar Nuevo Alumno</a>
+        
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>DNI</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Domicilio</th>
+                    <th>Legajo Universitario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="alumno : ${alumnos}">
+                    <td th:text="${alumno.dni}">DNI</td>
+                    <td th:text="${alumno.nombre}">Nombre</td>
+                    <td th:text="${alumno.apellido}">Apellido</td>
+                    <td th:text="${alumno.email}">Email</td>
+                    <td th:text="${alumno.telefono}">Teléfono</td>
+                    <td th:text="${#dates.format(alumno.fechaNacimiento, 'dd/MM/yyyy')}">Fecha de Nacimiento</td>
+                    <td th:text="${alumno.domicilio}">Domicilio</td>
+                    <td th:text="${alumno.LU}">Legajo Universitario</td>
+                    <td>
+                        <a th:href="@{'/alumnos/modificar/' + ${alumno.dni}}" class="btn btn-warning btn-sm">Editar</a>
+                        <a th:href="@{'/alumnos/eliminar/' + ${alumno.dni}}" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div data-th-replace="layouts/footer :: footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

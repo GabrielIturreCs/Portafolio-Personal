@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Listado de Docentes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div data-th-replace="layouts/header :: header"></div>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-primary text-center" th:text="${titulo}">Listado de Docentes</h1>
+        <a class="btn btn-primary mb-3" th:href="@{/docentes/nuevo}" role="button">Agregar Nuevo Docente</a>
+        
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Legajo</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="docente : ${docentes}">
+                    <td th:text="${docente.legajo}">Legajo</td>
+                    <td th:text="${docente.nombre}">Nombre</td>
+                    <td th:text="${docente.apellido}">Apellido</td>
+                    <td th:text="${docente.email}">Email</td>
+                    <td th:text="${docente.telefono}">Teléfono</td>
+                    <td>
+                        <a th:href="@{'/docentes/modificar/' + ${docente.legajo}}" class="btn btn-warning btn-sm">Editar</a>
+                        <a th:href="@{'/docentes/eliminar/' + ${docente.legajo}}" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div data-th-replace="layouts/footer :: footer"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
