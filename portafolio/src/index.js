@@ -1,5 +1,5 @@
 // Palabras que se escribirán
-const words = ["Desarrollador Web Frontend"];
+const words = ["Desarrollador Web Full Stack"];
 let index = 0;
 const dynamicText = document.getElementById("dynamic-text");
 
