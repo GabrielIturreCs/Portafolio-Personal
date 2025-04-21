@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="es" class="dark"  style="scroll-behavior: smooth;" >
+<head>
+  <link rel="icon" type="image/png" href="images/Foto de Perfil Linkedin formal gris (1).png">
+  <!-- Google tag (gtag.js) -->
+   
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2270NT3TP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2270NT3TP');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Gabriel Iturre</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+
+
+<body class="dark:bg-gray-900 text-white font-sans mt-32 transition-all duration-500 relative" style="scroll-behavior: smooth;">
+  <!-- Botón de alternar modo oscuro / claro -->
+  <header id="navbar" class="fixed top-0 left-0 w-full px-10 py-5 bg-transparent flex justify-between items-center z-50 transition-transform duration-500">
+    <!-- Logo -->
+    <div class="text-2xl font-semibold text-white cursor-default">Gabriel</div>
+  
+  
+    <ul id="navbar-links" class="hidden lg:flex space-x-9">
+      <li><a href="#sobremi1" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mí</a></li>
+      <li><a href="#tecnologias" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Tecnologías</a></li>
+      <li><a href="#proyectos" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Proyectos</a></li>
+      <li><a href="#servicios" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Servicios</a></li>
+      <li><a href="#educacion" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Educación</a></li>
+      <li><a href="#contacto" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Contacto</a></li>
+    </ul>
+  
+  
+    <div class="lg:hidden">
+      <button id="menu-open-btn" class="text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-nav" class="lg:hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-80 transform -translate-y-full transition-transform duration-500">
+      <div class="flex justify-between items-center p-4">
+        <div class="text-2xl font-semibold text-white cursor-default">Gabriel</div>
+        <!-- Close Button -->
+        <button id="menu-close-btn" class="text-white text-3xl">×</button>
+      </div>
+      <ul class="flex flex-col items-center space-y-6">
+        <li><a href="#sobremi1" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mí</a></li>
+        <li><a href="#tecnologías" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Tecnologías</a></li>
+        <li><a href="#proyectos" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Proyectos</a></li>
+        <li><a href="#servicios" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Servicios</a></li>
+        <li><a href="#educacion" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Educación</a></li>
+        <li><a href="#contacto" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Contacto</a></li>
+      </ul>
+    </div>
+    <!-- Navbar Mobile -->
+  <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-gray-900 text-white flex flex-col items-center justify-center transform -translate-y-full transition-transform duration-500 z-40">
+    <button id="close-menu" class="absolute top-5 right-5 text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <ul class="space-y-6 text-center">
+      <li><a href="#sobremi1" class="text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mi</a></li>
+      <li><a href="#tecnologías" class="text-lg font-medium hover:text-blue-500 transition duration-300">Tecnologías</a></li>
+      <li><a href="#proyectos" class="text-lg font-medium hover:text-blue-500 transition duration-300">Proyectos</a></li>
+      <li><a href="#servicios" class="text-lg font-medium hover:text-blue-500 transition duration-300">Servicios</a></li>
+      <li><a href="#educacion" class="text-lg font-medium hover:text-blue-500 transition duration-300">Educación</a></li>
+      <li><a href="#contacto" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Contacto</a></li>
+  
+    </ul>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden absolute top-0 right-0 w-full bg-transparent z-50 hidden">
+    <ul class="flex flex-col space-y-6 px-10 py-5 bg-black text-white">
+      <li><a href="#sobremi1" class="text-lg font-medium hover:text-blue-500 transition duration-300">Sobre mi</a></li>
+      <li><a href="#tecnologías" class="text-lg font-medium hover:text-blue-500 transition duration-300">Tecnologías</a></li>
+      <li><a href="#proyectos" class="text-lg font-medium hover:text-blue-500 transition duration-300">Proyectos</a></li>
+      <li><a href="#servicios" class="text-lg font-medium hover:text-blue-500 transition duration-300">Servicios</a></li>
+      <li><a href="#educacion" class="text-lg font-medium hover:text-blue-500 transition duration-300">Educación</a></li>
+      <li><a href="#contacto" class="text-white text-lg font-medium hover:text-blue-500 transition duration-300">Contacto</a></li>
+  
+    </ul>
+  </div>
+  </header>
+  <div class="fade-in flex flex-col items-center justify-center min-h-screen text-center px-6 md:px-0 " id="sobremi">
+    <!-- Botón de Modo Oscuro / Claro (Toggle Switch en la esquina derecha) -->
+ <!-- Contenedor de estrellas -->
+ <div class="stars">
+  <!-- Estrellas que caerán -->
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+
+</div>
+    <!-- Heading Section -->
+    <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg">
+      <img src="images/IMG_20230705_114537_019~2 (1).jpg" alt="Gabriel Iturre" class="w-full h-full object-cover">
+    </div>
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight yo-soy mt-10" >
+      Hola, Yo soy<br>
+      <span class="text-blue-500">Gabriel <span class="text-blue-300">Iturre</span></span>
+    </h1>
+    <p class="text-lg md:text-xl mt-3 text-blue-300 font-medium">
+      Soy un <span id="dynamic-text" class="typing"></span>
+    </p>
+    
+    <!-- Description -->
+    <p class="mt-6 text-base md:text-lg max-w-3xl text-gray-300 leading-relaxed">
+      Soy un entusiasta del desarrollo frontend, especializado en crear interfaces web dinámicas, intuitivas y visualmente atractivas. Mi enfoque combina diseño y funcionalidad para ofrecer soluciones efectivas. Como estudiante avanzado de Analista Programador, he participado en proyectos colaborativos, donde me esfuerzo por construir experiencias digitales que optimicen la interacción del usuario. Mi compromiso es ofrecer siempre el mejor trabajo posible, buscando resultados sobresalientes y contribuyendo al éxito del equipo.
+    </p>
+    <!-- Redes Sociales y Botón -->
+    <div class="flex items-center justify-center space-x-6 mt-8">
+      <!-- Redes Sociales -->
+      <div class="flex items-center space-x-6">
+        <a href="https://www.tiktok.com/@gapherdev?is_from_webapp=1&sender_device=pcm" class="neon-circle" target="_blank">
+          <img src="images/tik-tok.png" alt="">
+        </a>
+        <a href="https://www.linkedin.com/in/gabriel-iturre-73900626a/" class="neon-circle" target="_blank">
+          <img src="images/linkedin.png" alt="">
+        </a>
+        <a href="https://www.github.com" class="neon-circle" target="_blank">
+          <img src="images/github (1).png" alt="">
+        </a>
+    
+  </div>
+</div>
+      
+<!-- Botón CV -->
+<div class="mt-8 flex flex-col md:flex-row gap-4">
+  <!-- Botón Descargar CV -->
+  <a 
+    href="https://drive.google.com/file/d/1XOUmzEY2yAPVkvjfBLGq08Ba2qPiJRyH/view?usp=drive_link"
+    target="_blank"
+    class="w-full md:w-auto py-3 px-8 text-center font-bold rounded-lg bg-blue-800 text-white shadow-md transition duration-300 hover:bg-blue-700">
+    Descargar CV
+  </a>
+
+  <!-- Botón con email y modal al hacer clic -->
+  <div class="relative w-full md:w-auto">
+    <button 
+      id="emailButton"
+      onclick="toggleModal()"
+      class="block py-3 px-8 text-center font-bold rounded-lg bg-gray-700 text-white shadow-md transition duration-300 hover:bg-gray-600 select-none">
+      gabriel13iturre@gmail.com
+    </button>
+
+    <!-- Modal que se muestra al hacer clic -->
+    <div id="emailModal" class="absolute left-4 top-full mt-2 w-max p-4 bg-gray-900 border border-gray-700 rounded-lg shadow-lg hidden">
+      <a href="mailto:gabriel13iturre@gmail.com" class="block text-sm text-blue-400 hover:underline mb-2">
+        Abrir Gmail
+      </a>
+      <button onclick="copyEmail()" class="block text-sm text-blue-400 hover:underline">
+        Copiar email
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function copyEmail() {
+    navigator.clipboard.writeText("gabriel13iturre@gmail.com").then(() => {
+      alert("Correo copiado al portapapeles");
+    });
+  }
+
+  function toggleModal() {
+    const modal = document.getElementById('emailModal');
+    modal.classList.toggle('hidden');
+  }
+
+  // Cierra el modal si se hace clic fuera del botón o modal
+  document.addEventListener('click', function(event) {
+    const modal = document.getElementById('emailModal');
+    const button = document.getElementById('emailButton');
+    if (!button.contains(event.target) && !modal.contains(event.target)) {
+      modal.classList.add('hidden');
+    }
+  });
+</script>
+
+<!-- Sección Tecnologías -->
+<div class="mt-32 bg-gray-800 rounded-lg shadow-lg p-8 w-full max-w-5xl" id="tecnologias">
+  <div class="stars">
+    <!-- Estrellas que caerán -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+   
+  </div>
+  <h2 class="text-3xl font-bold text-blue-400">Tecnologías</h2>
+  <div class="grid grid-cols-4 sm:grid-cols-6 gap-6 mt-6">
+
+    <div class="flex flex-col items-center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+        <img src="images/html.png" alt="HTML" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">HTML</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+        <img src="images/css-3.png" alt="CSS" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">CSS</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://angular.io/docs" target="_blank">
+        <img src="images/icons8-angular-500.png" alt="Angular" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Angular</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://tailwindcss.com/docs" target="_blank">
+        <img src="images/icons8-tailwind-css-240.png" alt="Tailwind" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Tailwind</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://bootstrap.com" target="_blank">
+        <img src="images/icons8-oreja-480.png" alt="Tailwind" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Bootstrap</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+        <img src="images/js.png" alt="JavaScript" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">JavaScript</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://nodejs.org/en/docs/" target="_blank">
+        <img src="images/icons8-nodejs-240.png" alt="NodeJs" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">NodeJs</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://wordpress.org/support/" target="_blank">
+        <img src="images/icons8-wordpress-480.png" alt="WordPress" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">WordPress</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://dev.mysql.com/doc/" target="_blank">
+        <img src="images/icons8-mysql-96.png" alt="MySQL" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">MySQL</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.postgresql.org/docs/" target="_blank">
+        <img src="images/icons8-postgresql-400.png" alt="PostGreSQL" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">PostGreSQL</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.mongodb.com/docs/" target="_blank">
+        <img src="images/icons8-mongodb-a-cross-platform-document-oriented-database-program-96.png" alt="MongoDB" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">MongoDB</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.docker.com/resources/what-container" target="_blank">
+        <img src="images/icons8-docker-logo-96.png" alt="Docker" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Docker</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-física-64.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Electron</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-física-64.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Python</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-expresar-js-50.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Express</p>
+    </div>
+    <!-- Agrega más tecnologías aquí -->
+  </div>
+
+  <h2 class="text-3xl font-bold text-blue-400">Herramientas</h2>
+  <div class="grid grid-cols-4 sm:grid-cols-6 gap-6 mt-6">
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-git-240.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Git</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-github-512.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">GitHub</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-postman-is-the-only-complete-api-development-environment-96.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Postman</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-figura-240.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Figma</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-canva-240.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Canva</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-google-analitico-500.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Google Analytics</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-netlify-externo-una-compañía-de-computación-en-la-nube-que-ofrece-hosting-y-servicios-backend-sin-servidor-para-sitios-web-estáticos-logo-shadow-tal-revivo-100.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">Netlify</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.electronjs.org/docs" target="_blank">
+        <img src="images/icons8-vehículo-de-levitación-magnética-100.png" alt="Electron" class="w-12 h-12 transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <p class="mt-2 text-sm">RailWay</p>
+    </div>
+    </div>
+</div>
+<!-- Sección Últimos Proyectos -->
+<div class="container mx-auto px-15 py-8 mt-16" id="proyectos">
+  <div class="stars">
+    <!-- Estrellas que caerán -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Agregar más divs de .star si deseas más estrellas -->
+  </div>
+  <h2 class="text-3xl font-bold text-blue-400 text-center">Últimos Proyectos</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 max-w-5xl mx-auto">
+    
+    <!-- Card 1 -->
+    <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-xl">
+      <a href="https://peluqueriapetit.netlify.app" target="_blank" class="w-full">
+        <img src="images/peluqueriapetitweb.PNG" alt="Proyecto 1" class="rounded-md mb-4 w-full h-48 object-cover shadow-md transform transition-transform duration-300 hover:scale-110">
+      </a>
+      <h3 class="text-xl font-semibold text-white text-center">Sitio Web Peluquería Petit</h3>
+      <p class="text-sm text-gray-300 mt-4 text-center">
+        Diseñé y desarrollé el sitio web de Peluquería Petit, enfocándome en una experiencia visual atractiva y funcional para mostrar servicios y generar contacto con clientes de manera efectiva.
+      </p>
+      <!-- Tecnologías usadas -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-4">
+        <div class="flex items-center">
+          <img src="images/html.png" alt="HTML" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">HTML</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/css-3.png" alt="CSS" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">CSS</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/icons8-oreja-480.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">Bootstrap</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/js.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">JavaScript</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/icons8-figura-240.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">Figma</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/icons8-google-analitico-500.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">Google Analytics</p>
+        </div>
+      </div>
+      <div class="flex justify-between mt-6 w-full">
+        <a href="https://peluqueriapetit.netlify.app" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition w-full text-center">
+          Ver Sitio Web
+        </a>
+      </div>
+    </div>
+<!-- Card 2 -->
+<div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-xl">
+  <a href="https://tusitioweb.com" target="_blank" class="w-full">
+    <img src="images/postulate.PNG" alt="Portal de Empleos" class="rounded-md mb-4 w-full h-48 object-cover shadow-md transform transition-transform duration-300 hover:scale-110">
+  </a>
+  <h3 class="text-xl font-semibold text-white text-center">Portal de Empleos</h3>
+  <p class="text-sm text-gray-300 mt-4 text-center">
+    Encuentra las mejores oportunidades laborales y postúlate fácilmente desde una plataforma diseñada para conectar talento con empresas líderes en el sector.
+  </p>
+  <!-- Tecnologías usadas -->
+  <div class="flex flex-wrap items-center justify-center gap-4 mt-4">
+    <div class="flex items-center">
+      <img src="images/html.png" alt="HTML" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">HTML</p>
+    </div>
+    <div class="flex items-center">
+      <img src="images/css-3.png" alt="CSS" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">CSS</p>
+    </div>
+    <div class="flex items-center">
+      <img src="images/icons8-oreja-480.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">Bootstrap</p>
+    </div>
+    <div class="flex items-center">
+      <img src="images/js.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">JavaScript</p>
+    </div>
+    <div class="flex items-center">
+      <img src="images/icons8-figura-240.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">Figma</p>
+    </div>
+    <div class="flex items-center">
+      <img src="images/icons8-google-analitico-500.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+      <p class="text-sm text-gray-300">Google Analytics</p>
+    </div>
+  </div>
+  <div class="flex justify-between mt-6 w-full">
+    <a href="https://empleoflash.netlify.app/" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition w-full text-center">
+      Ver Sitio Web
+    </a>
+  </div>
+</div>
+  </div>
+ <!-- Sección de Servicios -->
+<div id="servicios" class="mt-16 bg-gray-900  p-8 w-full max-w-6xl mx-auto">
+  <div class="stars">
+    <!-- Estrellas que caerán -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Agregar más divs de .star si deseas más estrellas -->
+  </div>
+  <h2 class="text-4xl font-bold text-blue-400 text-center relative">
+      <!-- Ícono izquierdo -->
+      <span class="absolute left-0 top-1/2 transform -translate-y-1/2">
+          <i class="fas fa-star text-blue-400"></i>
+      </span>
+      Servicios de Diseño Web
+      <!-- Ícono derecho -->
+      <span class="absolute right-0 top-1/2 transform -translate-y-1/2">
+          <i class="fas fa-star text-blue-400"></i>
+      </span>
+  </h2>
+  <p class="text-gray-200 text-center mt-4 text-lg">
+      Transformo tus ideas en sitios web atractivos, funcionales y modernos.
+  </p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+      <!-- Tarjeta de servicio 1 -->
+      <div class="group relative bg-gray-800 p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+          <div class="absolute top-4 right-4 text-gray-500 group-hover:text-blue-400 transition duration-300">
+              <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="flex justify-between mb-4">
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-diseño-web-filled-100.png" alt="Ícono móvil" class="w-8 h-8" />
+              </div>
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-curved-arrow-downward-100.png" alt="Ícono servicio 2" class="w-8 h-8" />
+              </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-blue-400 transition duration-300">
+              Diseño Responsivo
+          </h3>
+          <p class="text-gray-300 group-hover:text-gray-200 transition duration-300 mt-2 text-sm">
+              Sitios que se adaptan a cualquier dispositivo, asegurando una experiencia excelente en móviles y escritorio.
+          </p>
+      </div>
+
+      <!-- Tarjeta de servicio 2 -->
+      <div class="group relative bg-gray-800 p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+          <div class="absolute top-4 right-4 text-gray-500 group-hover:text-blue-400 transition duration-300">
+              <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="flex justify-between mb-4">
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-comercio-electrónico-100.png" alt="Ícono carrito" class="w-8 h-8" />
+              </div>
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-curved-arrow-downward-100.png" alt="Ícono servicio 2" class="w-8 h-8" />
+              </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-blue-400 transition duration-300">
+              Funcionalidad E-commerce
+          </h3>
+          <p class="text-gray-300 group-hover:text-gray-200 transition duration-300 mt-2 text-sm">
+              Desarrollo de tiendas en línea con sistemas de pago integrados, optimizadas para aumentar tus ventas.
+          </p>
+      </div>
+
+      <!-- Tarjeta de servicio 3 -->
+      <div class="group relative bg-gray-800 p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+          <div class="absolute top-4 right-4 text-gray-500 group-hover:text-blue-400 transition duration-300">
+              <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="flex justify-between mb-4">
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-seo-100.png" alt="Ícono lupa" class="w-8 h-8" />
+              </div>
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-curved-arrow-downward-100.png" alt="Ícono servicio 2" class="w-8 h-8" />
+              </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-blue-400 transition duration-300">
+              Optimización SEO
+          </h3>
+          <p class="text-gray-300 group-hover:text-gray-200 transition duration-300 mt-2 text-sm">
+              Mejora la visibilidad de tu sitio en motores de búsqueda para atraer más clientes.
+          </p>
+      </div>
+
+      <!-- Tarjeta de servicio 4 -->
+      <div class="group relative bg-gray-800 p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+          <div class="absolute top-4 right-4 text-gray-500 group-hover:text-blue-400 transition duration-300">
+              <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="flex justify-between mb-4">
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-comercio-electrónico-100.png" alt="Ícono carrito" class="w-8 h-8" />
+              </div>
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-curved-arrow-downward-100.png" alt="Ícono servicio 2" class="w-8 h-8" />
+              </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-blue-400 transition duration-300">
+              Desarrollo Frontend
+          </h3>
+          <p class="text-gray-300 group-hover:text-gray-200 transition duration-300 mt-2 text-sm">
+              Experiencia en HTML, CSS, JavaScript y frameworks como React o Tailwind para interfaces modernas.
+          </p>
+      </div>
+
+      <!-- Tarjeta de servicio 5 -->
+      <div class="group relative bg-gray-800 p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+          <div class="absolute top-4 right-4 text-gray-500 group-hover:text-blue-400 transition duration-300">
+              <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="flex justify-between mb-4">
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-spinner-marco-2-96.png" alt="Ícono imágenes" class="w-8 h-8" />
+              </div>
+              <div class="text-white transition duration-300 text-4xl">
+                  <img src="images/icons8-curved-arrow-downward-100.png" alt="Ícono servicio 2" class="w-8 h-8" />
+              </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-blue-400 transition duration-300">
+              Carga de Contenido
+          </h3>
+          <p class="text-gray-300 group-hover:text-gray-200 transition duration-300 mt-2 text-sm">
+              Ayuda con la carga de imágenes, videos y textos para asegurar que tu sitio esté completamente funcional.
+          </p>
+      </div>
+  </div>
+</div>
+<!-- SECCIÓN: MI HISTORIA -->
+<div class="fade-in min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left px-6 md:px-0" id="mi-historia">
+  
+  <!-- Contenedor de estrellas (decoración) -->
+  <div class="stars">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+
+  <!-- Foto y botones/redes sociales -->
+  <div class="md:w-1/3 flex flex-col items-center mb-8 md:mb-0">
+    <div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg">
+      <img src="images/IMG_20230705_114537_019~2 (1).jpg" alt="Gabriel Iturre" class="w-full h-full object-cover">
+    </div>
+
+    <!-- Botones debajo de la foto -->
+    <div class="mt-6 flex flex-col md:flex-row gap-4 w-full justify-center">
+      <a 
+        href="https://drive.google.com/file/d/1XOUmzEY2yAPVkvjfBLGq08Ba2qPiJRyH/view?usp=drive_link"
+        target="_blank"
+        class=" py-3 px-8 text-center font-bold rounded-lg bg-blue-800  text-white shadow-md transition duration-300 hover:bg-blue-700 block mt-2">
+        Curriculum
+      </a>
+      
+      <a 
+      href="https://gabrieliturre.hashnode.dev/" target="_blank"
+      class=" py-3 px-8 text-center font-bold rounded-lg bg-gray-700 text-white shadow-md transition duration-300 hover:bg-gray-600 block mt-2">
+      Blog
+    </a>  
+
+    </div>
+  
+    <!-- Redes Sociales debajo de los botones -->
+    <div class="flex items-center space-x-6 mt-6 justify-center md:justify-center">
+      <a href="https://www.tiktok.com/@gapherdev?is_from_webapp=1&sender_device=pcm" class="neon-circle" target="_blank">
+        <img src="images/tik-tok.png" alt="TikTok">
+      </a>
+      <a href="https://www.linkedin.com/in/gabriel-iturre-73900626a/" class="neon-circle" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.github.com" class="neon-circle" target="_blank">
+        <img src="images/github (1).png" alt="GitHub">
+      </a>
+    </div>
+  </div>
+
+<!-- Texto a la derecha -->
+<div class="md:w-1/2 md:pl-10 flex flex-col items-center md:items-start" id="sobremi1">
+  <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-center text-white mt-4">
+    Sobre <span class="text-blue-500">mí</span>
+  </h1>
+  
+  <p class="mt-6 text-base md:text-lg max-w-3xl text-gray-300 leading-relaxed">
+    Desde pequeño, la tecnología despertó mi curiosidad. Rodeado de computadoras, siempre quise entender su funcionamiento. Con el tiempo, descubrí que mi verdadera pasión era la <span class="text-blue-500 font-bold">programación</span>, donde podía transformar ideas en realidad.
+  </p>
+
+
+  <p class="mt-4 text-base md:text-lg max-w-3xl text-gray-300 leading-relaxed">
+    Actualmente, soy <span class="text-blue-500 font-bold">desarrollador web</span>, con experiencia en <span class="font-bold">HTML, CSS, JavaScript, Angular, Docker y MySQL</span>. Mi formación incluye la carrera de <span class="text-blue-500 font-bold">Analista Programador Universitario en la UNJu</span>, complementada con cursos en <span class="text-blue-500 font-bold">Udemy y Argentina Programa</span>.
+  </p>
+  
+  <h2 class="text-2xl font-bold text-white mt-6">💡 ¿Qué me distingue como profesional?</h2>
+  <ul class="mt-4 text-base md:text-lg max-w-3xl text-gray-300 leading-relaxed list-disc pl-6">
+    <li><span class="font-bold text-blue-500">Frontend y Backend:</span> Desarrollo aplicaciones web con <span class="font-bold">Angular</span> para interfaces modernas e interactivas, y utilizo <span class="font-bold">MySQL</span> para gestionar bases de datos de manera eficiente.</li>
+    <li><span class="font-bold text-blue-500">Escalabilidad y portabilidad:</span> Gracias a <span class="font-bold">Docker</span>, puedo garantizar que mis aplicaciones sean fácilmente desplegables y escalables en distintos entornos.</li>
+    <li><span class="font-bold text-blue-500">Monitoreo y rendimiento:</span> Herramientas como <span class="font-bold">Grafana y Prometheus</span> me permiten supervisar el rendimiento y anticipar problemas antes de que impacten en el usuario.</li>
+  </ul>
+  
+  <h2 class="text-2xl font-bold text-white mt-6">🚀 Mi enfoque</h2>
+  <p class="mt-4 text-base md:text-lg max-w-3xl text-gray-300 leading-relaxed">
+    Para mí, la <span class="text-blue-500 font-bold">programación</span> no es solo escribir código, sino aportar soluciones tecnológicas eficientes y escalables. Me esfuerzo por optimizar cada desarrollo, asegurando <span class="text-blue-500 font-bold">rendimiento</span>, <span class="text-blue-500 font-bold">seguridad</span> y <span class="text-blue-500 font-bold">una excelente experiencia de usuario</span>. La resolución de problemas y la adaptación a nuevas tecnologías son pilares en mi crecimiento profesional.
+  </p>
+  
+  <h2 class="text-2xl font-bold text-white mt-6">🌎 Mirando hacia el futuro</h2>
+  <p class="mt-4 text-base md:text-lg max-w-3xl text-gray-300 leading-relaxed">
+    Mi objetivo es seguir creciendo en la industria del <span class="text-blue-500 font-bold">desarrollo web</span>, creando <span class="text-blue-500 font-bold">soluciones innovadoras</span> y formando parte de un equipo que comparta mi pasión por la tecnología. Sé que siempre hay algo nuevo por aprender, y esa es precisamente la razón por la que amo este camino.
+  </p>
+
+
+
+
+
+  </div>
+</div>
+<section class="my-16">
+  <h2 class="text-5xl font-bold text-blue-400 justify-center mt-4 ml-4">Publicaciones del blog</h2>
+<br>
+<br><br>
+
+  <!-- Contenedor de los postes -->
+  <div class="flex flex-col items-center gap-8">
+    <!-- Post 1 -->
+    <div class="flex flex-col md:flex-row items-center gap-6 bg-gray-800 p-6 rounded-lg shadow-xl hover:bg-gray-700 transition-all duration-300 max-w-5xl w-full">
+      <!-- Imagen -->
+      <a href="https://gabrieliturre.hashnode.dev/creando-el-primer-sitio-web-de-una-peluqueria-en-palpala-la-historia-de-petit"  class="w-full md:w-1/3" target="_blank"  >
+        <img src="images/petittt.PNG" alt="Imagen Post 1" class="w-full h-56 object-cover rounded-lg shadow-lg">
+      </a>
+      
+      <!-- Texto del post -->
+      <div class="w-full md:w-2/3 mt-4 md:mt-0">
+        <h3 class="text-2xl font-bold text-white mt-2">Creando el Primer Sitio Web de una Peluquería en Palpalá: La Historia de Petit</h3>
+        <p class="mt-6 text-base md:text-lg text-gray-300 leading-relaxed">Uno de los mayores problemas que enfrentaba la peluquería era la organización de los turnos. Antes, los clientes tenían que llamar o ir en persona para reservar. Diseñé la web para que la gente pudiera encontrar fácilmente la ubicación y supiera que era obligatorio reservar un turno, lo que redujo cancelaciones de último momento y optimizó el trabajo.</p>
+        <a 
+          href="https://gabrieliturre.hashnode.dev/creando-el-primer-sitio-web-de-una-peluqueria-en-palpala-la-historia-de-petit" target="_blank" 
+          class="py-3 px-6 text-center font-semibold rounded-lg bg-blue-600 text-white shadow-md transition duration-300 hover:bg-blue-500 mt-4 inline-block">
+          Leer más &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<br>
+
+</section>
+<!-- FIN SECCIÓN: MI HISTORIA -->
+<!-- Sección Educación -->
+<section class="education-section mt-16 bg-gray-900  p-8 w-full max-w-6xl mx-auto" id="educacion">
+
+  
+  <div class="stars">
+    <!-- Estrellas que caerán -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Agregar más divs de .star si deseas más estrellas -->
+  </div>
+  <h2 class="text-5xl font-bold text-blue-400">Mi Educación</h2>
+  <p class="text-gray-400 mt-4">
+    A lo largo de mi trayectoria he adquirido conocimientos en diversas tecnologías y herramientas que me han permitido crecer como profesional en desarrollo web y programación.
+  </p>
+  
+  <div class="education-cards grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 overflow-y-auto max-h-96 pr-4">
+    <!-- Tarjeta 1 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <p class="text-blue-400 font-semibold text-lg">2024</p>
+      <h3 class="text-2xl font-bold text-white mt-2">TodoCode - HTML y CSS</h3>
+      <div class="flex items-center mt-2">
+        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <p class="text-gray-400">Curso Online</p>
+      </div>
+      <p class="text-gray-300 mt-4">
+        Aprendí HTML y CSS con Luisina. Este curso me permitió fortalecer mis habilidades en diseño web.
+      </p>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <p class="text-blue-400 font-semibold text-lg">2022 - 2025</p>
+      <h3 class="text-2xl font-bold text-white mt-2">Facultad de Ingeniería - UNJu</h3>
+      <div class="flex items-center mt-2">
+        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <p class="text-gray-400">Analista Programador Universitario</p>
+      </div>
+      <p class="text-gray-300 mt-4">
+        Actualmente soy estudiante avanzado, con conocimientos en Angular, bases de datos, C++, JavaScript, Spring Boot, TypeScript, entre otros.
+      </p>
+    </div>
+
+    <!-- Tarjeta 3  3333--> 
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <p class="text-blue-400 font-semibold text-lg">2022</p>
+      <h3 class="text-2xl font-bold text-white mt-2">Argentina Programa</h3>
+      <div class="flex items-center mt-2">
+        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <p class="text-gray-400">JavaScript</p>
+      </div>
+      <p class="text-gray-300 mt-4">
+        Logré aprobar este curso donde aprendí los fundamentos de JavaScript y su aplicación en proyectos interactivos.
+      </p>
+    </div>
+
+    <!-- Tarjeta 4 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <p class="text-blue-400 font-semibold text-lg">2024</p>
+      <h3 class="text-2xl font-bold text-white mt-2">Universidad Desarrollo Web - Udemy</h3>
+      <div class="flex items-center mt-2">
+        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <p class="text-gray-400">FrontEnd Web Developer</p>
+      </div>
+      <p class="text-gray-300 mt-4">
+        Este curso me permitió profundizar en HTML, CSS y JavaScript, incluyendo DOM, eventos, POO y proyectos prácticos como calculadoras y sistemas de administración.
+      </p>
+    </div>
+
+    <!-- Tarjeta 5 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <p class="text-blue-400 font-semibold text-lg">2025</p>
+      <h3 class="text-2xl font-bold text-white mt-2">Universidad Angular - Udemy</h3>
+      <div class="flex items-center mt-2">
+        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <p class="text-gray-400">De Cero a Experto</p>
+      </div>
+      <p class="text-gray-300 mt-4">
+        Aprendí arquitectura Angular, TypeScript, módulos, Firebase y despliegue de aplicaciones en producción, además de varios proyectos prácticos.
+      </p>
+    </div>
+  </div>
+</section>
+<div class="text-center my-12">
+  <br>
+  <br>
+  <h1 class="text-4xl font-semibold mb-4">¡Hablemos! 📣</h1>
+  <p class="text-lg mb-6">Puedes enviarme un correo, mandarme un mensaje en LinkedIn, o si prefieres, usar el formulario de contacto abajo.</p>
+
+  <!-- Botones de contacto -->
+  <div class="mt-8 flex flex-col md:flex-row gap-4 justify-center">
+    <!-- Botón Enviar mensaje por LinkedIn -->
+    <a 
+      href="https://www.linkedin.com/in/gabriel-iturre-73900626a/"
+      target="_blank"
+      class="w-full md:w-auto py-3 px-8 text-center font-bold rounded-lg bg-blue-800 text-white shadow-md transition duration-300 hover:bg-blue-700">
+      Envíame un mensaje por LinkedIn
+    </a>
+
+    <!-- Botón con email -->
+    <button 
+      id="emailButton"
+      onclick="copyEmail()"
+      class="block py-3 px-8 text-center font-bold rounded-lg bg-gray-700 text-white shadow-md transition duration-300 hover:bg-gray-600 select-none">
+      gabriel13iturre@gmail.com
+    </button>
+  </div>
+</div>
+
+<!-- Script para copiar el email -->
+<script>
+  function copyEmail() {
+    const email = "gabriel13iturre@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      alert("Correo copiado al portapapeles.");
+    }).catch(err => {
+      alert("Hubo un problema al copiar el correo.");
+    });
+  }
+</script>
+
+<!-- Sección de Contacto -->
+<section id="contacto" class="min-h-screen flex items-center justify-center bg-gray-900 text-white px-6 py-12">
+  
+  <div class="stars">
+    <!-- Estrellas que caerán -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+  <div class="w-full max-w-2xl bg-gray-800 p-8 rounded-lg shadow-md">
+    <h2 class="text-4xl font-bold text-center mb-8 text-white">
+      Contáct<span class="text-blue-500">ame</span>
+    </h2>
+    <form id="contact-form" action="https://formsubmit.co/gabriel15iturre@gmail.com" method="POST">
+      <!-- Campo de Nombre -->
+      <div class="mb-4">
+        <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Nombre completo</label>
+        <input type="text" name="name" id="name" required
+               class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Campo de Correo Electrónico -->
+      <div class="mb-4">
+        <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Correo Electrónico</label>
+        <input type="email" name="email" id="email" required
+               class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Campo de Asunto -->
+      <div class="mb-4">
+        <label for="subject" class="block text-gray-300 text-sm font-bold mb-2">Asunto</label>
+        <input type="text" name="subject" id="subject" required
+               class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Campo de Mensaje -->
+      <div class="mb-4">
+        <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Mensaje</label>
+        <textarea name="message" id="message" rows="5" required
+                  class="w-full px-4 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+
+      <!-- Botón Enviar -->
+      <div class="flex justify-center mt-6">
+        <button id="submit-button" type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-8 rounded-full shadow-md transition flex items-center justify-center">
+          <span id="button-text">Enviar</span>
+          <div id="loading-icon" class="hidden ml-2">
+            <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0z"></path>
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      <!-- Campos Ocultos -->
+      <input type="hidden" name="_next" value="https://gabrieliturre.netlify.app">
+      <input type="hidden" name="_captcha" value="false">
+    </form>
+    <!-- Notificaciones -->
+    <div id="notification" class="hidden mt-6 text-center text-white font-medium p-4 rounded-md"></div>
+  </div>
+</section>
+<!-- Carteles de Notificación -->
+<div id="notification-sending" class="hidden fixed top-16 right-5 bg-yellow-500 text-white py-2 px-4 rounded-lg shadow-lg">
+  Enviando...
+</div>
+<div id="notification-success" class="hidden fixed top-16 right-5 bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg">
+  Enviado con éxito 🎉
+</div>
+
+
+<!-- Sonido de Enviado -->
+<audio id="success-sound" src="https://freesound.org/data/previews/256/256113_4486188-lq.mp3"></audio>
+<footer class="bg-gray-900 text-gray-400 p-4 w-full mt-20">
+  <div class="container mx-auto flex justify-between items-center">
+    <p class="text-sm">Copyright © 2025 por Gabriel Iturre | Todos los derechos reservados.</p>
+    <a href="#top" class="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full hover:bg-blue-500 transition-all duration-300">
+      <!-- Reemplaza esta imagen con la URL de tu imagen -->
+      <img src="images/icons8-up-52.png" alt="Flecha hacia arriba" class="w-6 h-6 animate-bounce">
+    </a>
+  </div>
+</footer>
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>

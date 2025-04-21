@@ -1,0 +1,199 @@
+/* Efecto de parpadeo del cursor */
+.typing::after {
+  content: '|';
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animación para el texto en "yo soy" */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.yo-soy {
+  animation: slideIn 1s ease-out;
+}
+
+/* Redes sociales */
+.neon-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px; /* Tamaño del círculo */
+  height: 48px;
+  border-radius: 50%; /* Hacerlo circular */
+  background: inherit; /* Usar el mismo fondo que el sitio */
+  border: 2px solid transparent; /* Evitar bordes visibles */
+  box-shadow: 0 0 10px 4px rgba(59, 130, 246, 0.5), 
+              0 0 30px 6px rgba(59, 130, 246, 0.8); /* Efecto neón */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: agrandar el círculo y neón más intenso */
+.neon-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 6px rgba(59, 130, 246, 0.7), 
+              0 0 40px 8px rgba(59, 130, 246, 1);
+}
+
+/* Imágenes o íconos dentro del círculo */
+.neon-circle img, .neon-circle svg {
+  width: 60%; /* Tamaño relativo al círculo */
+  height: 60%;
+  border-radius: 50%; /* Hacer íconos circulares si es necesario */
+  object-fit: cover; /* Ajustar imágenes sin deformarlas */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0; /* Ajustar padding para que no haya márgenes innecesarios */
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #3b82f6;
+}
+
+/* Ajustes para el body */
+body {
+  margin-top: 100px; /* Espacio para que el contenido no quede tapado por el header fijo */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para pantallas móviles */
+#mobile-menu {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para pantallas más grandes */
+@media (min-width: 768px) {
+  #mobile-menu {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+/*extrellas de fondo */
+
+
+  /* Estrellas de fondo */
+ /* Estrellas de fondo */
+ .stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Animación para estrellas cayendo */
+.star {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: fall 5s linear infinite;
+}
+
+/* Efecto de caída */
+@keyframes fall {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);  /* Caen hasta la parte inferior de la pantalla */
+    opacity: 0;
+  }
+}
+
+/* Varias estrellas con diferentes tamaños y tiempos */
+.star:nth-child(1) { left: 10%; width: 3px; height: 3px; animation-duration: 3s; animation-delay: 0s; }
+.star:nth-child(2) { left: 30%; width: 5px; height: 5px; animation-duration: 4s; animation-delay: 1s; }
+.star:nth-child(3) { left: 50%; width: 2px; height: 2px; animation-duration: 6s; animation-delay: 2s; }
+.star:nth-child(4) { left: 70%; width: 4px; height: 4px; animation-duration: 5s; animation-delay: 0.5s; }
+.star:nth-child(5) { left: 90%; width: 3px; height: 3px; animation-duration: 7s; animation-delay: 3s; }
+/* Puedes agregar más estrellas con más estilos similares */
+
+
+
+/*****************************************scroll/
+
+  /* Estilo del scroll y sus botones */
+  .education-cards::-webkit-scrollbar {
+    width: 10px;
+  }
+  .education-cards::-webkit-scrollbar-thumb {
+    background-color: #3b82f6; /* Azul para el "pulgar" */
+    border-radius: 5px;
+  }
+  .education-cards::-webkit-scrollbar-track {
+    background-color: #1e293b; /* Color gris oscuro para el track */
+  }
+  .education-cards::-webkit-scrollbar-button {
+    background-color: #3b82f6; /* Azul para los botones */
+    height: 16px;
+
+  }
+  .education-cards::-webkit-scrollbar-button:increment {
+    background-color: #3b82f6; /* Botón inferior */
+  }
+  .education-cards::-webkit-scrollbar-button:decrement {
+    background-color: #3b82f6; /* Botón superior */
+  }
