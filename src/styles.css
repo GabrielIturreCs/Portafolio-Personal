@@ -197,3 +197,141 @@ body {
   .education-cards::-webkit-scrollbar-button:decrement {
     background-color: #3b82f6; /* Botón superior */
   }
+/* Estilos adicionales para el carrusel y la funcionalidad "Ver más" */
+
+/* Mostrar/ocultar proyectos con el checkbox hack */
+#ver-mas-toggle:checked ~ .grid .hidden-project {
+  display: flex;
+}
+
+#ver-mas-toggle:checked ~ .flex label #ver-mas-text {
+  content: "Ver menos";
+}
+
+#ver-mas-toggle:checked ~ .flex label #ver-mas-icon {
+  transform: rotate(180deg);
+}
+
+/* Transición suave para el carrusel */
+.carousel-images {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Asegurar que todas las tarjetas tengan la misma altura */
+.grid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegurar que los botones siempre estén al final */
+.grid > div > div:last-child {
+  margin-top: auto;
+}
+
+/* Mostrar/ocultar proyectos con el checkbox hack */
+#ver-mas-toggle:checked ~ .grid .hidden-project {
+  display: flex;
+}
+
+#ver-mas-toggle:checked ~ .flex label #ver-mas-text {
+  content: "Ver menos";
+}
+
+#ver-mas-toggle:checked ~ .flex label #ver-mas-icon {
+  transform: rotate(180deg);
+}
+
+/* Transición suave para el carrusel */
+.carousel-images {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Asegurar que todas las tarjetas tengan la misma altura */
+.grid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegurar que los botones siempre estén al final */
+.grid > div > div:last-child {
+  margin-top: auto;
+}
+/* Estilos para mejorar el contraste de los controles del carrusel */
+
+/* Mejorar contraste de los botones de navegación (que son círculos) */
+.carousel-prev,
+.carousel-next {
+  background-color: rgba(0, 0, 0, 0.7) !important; /* Fondo más oscuro */
+  color: white !important;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  transform: scale(1.1);
+}
+
+/* Mejorar contraste de los indicadores (los puntos/círculos en la parte inferior) */
+.carousel-indicators {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  padding: 4px 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-indicator {
+  width: 8px !important;
+  height: 8px !important;
+  margin: 0 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border-radius: 50%; /* Asegurar que sean círculos */
+}
+
+.carousel-indicator.active {
+  background-color: white !important;
+}
+
+.carousel-indicator:not(.active) {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Transición suave para el carrusel */
+.carousel-images {
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Animación de fade para los controles al pasar el mouse */
+.carousel-container:hover .carousel-prev,
+.carousel-container:hover .carousel-next,
+.carousel-container:hover .carousel-indicators {
+  opacity: 1;
+}
+
+.carousel-prev,
+.carousel-next,
+.carousel-indicators {
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease-out;
+}

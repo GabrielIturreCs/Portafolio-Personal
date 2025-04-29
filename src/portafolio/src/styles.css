@@ -197,3 +197,33 @@ body {
   .education-cards::-webkit-scrollbar-button:decrement {
     background-color: #3b82f6; /* Botón superior */
   }
+/* Estilos adicionales para el carrusel y la funcionalidad "Ver más" */
+
+/* Mostrar/ocultar proyectos con el checkbox hack */
+#ver-mas-toggle:checked ~ .grid .hidden-project {
+  display: flex;
+}
+
+#ver-mas-toggle:checked ~ .flex label #ver-mas-text {
+  content: "Ver menos";
+}
+
+#ver-mas-toggle:checked ~ .flex label #ver-mas-icon {
+  transform: rotate(180deg);
+}
+
+/* Transición suave para el carrusel */
+.carousel-images {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Asegurar que todas las tarjetas tengan la misma altura */
+.grid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegurar que los botones siempre estén al final */
+.grid > div > div:last-child {
+  margin-top: auto;
+}

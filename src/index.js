@@ -184,11 +184,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   this.submit();
 
   // Después de enviar, mostrar el mensaje de éxito
-  setTimeout(function() {
-    notificationSending.classList.add('hidden');
-    notificationSuccess.classList.remove('hidden');
-    buttonText.textContent = 'Enviado con éxito 🎉';
-  }, 2000); // 3 segundos de espera antes de mostrar el éxito
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -201,4 +196,70 @@ document.addEventListener('DOMContentLoaded', () => {
     star.style.animationDelay = `${Math.random() * 3}s`; // Retraso aleatorio
     starsContainer.appendChild(star);
   }
+});
+
+// Código JavaScript para el botón "Ver más"
+document.addEventListener("DOMContentLoaded", function() {
+  const verMasToggle = document.getElementById('ver-mas-toggle');
+  const verMasText = document.getElementById('ver-mas-text');
+  const verMasIcon = document.getElementById('ver-mas-icon');
+  
+  // Asegurarse de que los proyectos adicionales estén ocultos inicialmente
+  document.querySelectorAll('.hidden-project').forEach(project => {
+    project.style.display = 'none';
+  });
+  
+  // Manejar el cambio del checkbox
+  verMasToggle.addEventListener('change', function() {
+    if (this.checked) {
+      // Mostrar proyectos adicionales
+      document.querySelectorAll('.hidden-project').forEach(project => {
+        project.style.display = 'flex';
+      });
+      verMasText.textContent = "Ver menos";
+      verMasIcon.classList.remove('fa-chevron-down');
+      verMasIcon.classList.add('fa-chevron-up');
+    } else {
+      // Ocultar proyectos adicionales
+      document.querySelectorAll('.hidden-project').forEach(project => {
+        project.style.display = 'none';
+      });
+      verMasText.textContent = "Ver más";
+      verMasIcon.classList.remove('fa-chevron-up');
+      verMasIcon.classList.add('fa-chevron-down');
+    }
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  const notificationSending = document.getElementById('notification-sending');
+  const notificationSuccess = document.getElementById('notification-success');
+  const submitButton = document.getElementById('submit-button');
+  const buttonText = document.getElementById('button-text');
+  const loadingIcon = document.getElementById('loading-icon');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que se envíe el formulario de inmediato
+
+    // Mostrar "Enviando..."
+    notificationSending.classList.remove('hidden');
+    submitButton.disabled = true;
+    loadingIcon.classList.remove('hidden');
+    buttonText.textContent = 'Enviando...';
+
+    // Simular tiempo de envío (ejemplo: 2 segundos)
+    setTimeout(() => {
+      notificationSending.classList.add('hidden');
+      notificationSuccess.classList.remove('hidden');
+      loadingIcon.classList.add('hidden');
+      buttonText.textContent = 'Enviado con éxito 🎉';
+
+      // Redirigir después de mostrar éxito (ej. 2.5 seg)
+      setTimeout(() => {
+        form.submit(); // Ahora sí, enviar el formulario real
+      }, 2500);
+    }, 2000);
+  });
 });

@@ -202,3 +202,5 @@ document.addEventListener('DOMContentLoaded', () => {
     starsContainer.appendChild(star);
   }
 });
+
+
