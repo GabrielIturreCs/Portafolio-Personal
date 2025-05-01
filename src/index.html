@@ -151,7 +151,7 @@
 <div class="mt-8 flex flex-col md:flex-row gap-4">
   <!-- Botón Descargar CV -->
   <a 
-    href="https://drive.google.com/file/d/1QTT3RIjWoTw7vh7vJvbz7BkAnrWwB-uB/view?usp=sharingk" target="_blank" rel="noopener noreferrer"
+    href="https://drive.google.com/file/d/1e78lOPjsbZjpki-vT_EZTDjqXNi5Jsvj/view?usp=sharing" target="_blank" rel="noopener noreferrer"
     target="_blank"
     class="w-full md:w-auto py-3 px-8 text-center font-bold rounded-lg bg-blue-800 text-white shadow-md transition duration-300 hover:bg-blue-700">
     Descargar CV
@@ -168,10 +168,10 @@
 
     <!-- Modal que se muestra al hacer clic -->
     <div id="emailModal" class="absolute left-4 top-full mt-2 w-max p-4 bg-gray-900 border border-gray-700 rounded-lg shadow-lg hidden">
-      <a href="mailto:gabriel13iturre@gmail.com" class="block text-sm text-blue-400 hover:underline mb-2">
+      <a href="mailto:gabriel13iturre@gmail.com" class="block text-sm text-blue-800 hover:underline mb-2">
         Abrir Gmail
       </a>
-      <button onclick="copyEmail()" class="block text-sm text-blue-400 hover:underline">
+      <button onclick="copyEmail()" class="block text-sm text-blue-800 hover:underline">
         Copiar email
       </button>
     </div>
@@ -211,7 +211,7 @@
     <div class="star"></div>
    
   </div>
-  <h2 class="text-3xl font-bold text-blue-400">Tecnologías</h2>
+  <h2 class="text-3xl font-bold text-blue-800">Tecnologías</h2>
   <div class="grid grid-cols-4 sm:grid-cols-6 gap-6 mt-6">
 
     <div class="flex flex-col items-center">
@@ -303,7 +303,7 @@
     <!-- Agrega más tecnologías aquí -->
   </div>
 
-  <h2 class="text-3xl font-bold text-blue-400">Herramientas</h2>
+  <h2 class="text-3xl font-bold text-blue-800">Herramientas</h2>
   <div class="grid grid-cols-4 sm:grid-cols-6 gap-6 mt-6">
     <div class="flex flex-col items-center">
       <a href="https://www.electronjs.org/docs" target="_blank">
@@ -361,7 +361,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <div class="container mx-auto py-12 px-4">
-  <h2 class="text-3xl font-bold text-blue-400 text-center">Últimos Proyectos</h2>
+  <h2 class="text-3xl font-bold text-blue-800 text-center">Últimos Proyectos</h2>
   
   <!-- Checkbox hack para mostrar/ocultar proyectos -->
   <input type="checkbox" id="ver-mas-toggle" class="hidden">
@@ -931,7 +931,55 @@
 <br>
 
 </section>
-<!-- FIN SECCIÓN: MI HISTORIA -->
+<!-- Foto y botones/redes sociales -->
+<div class="md:w-1/3 flex flex-col items-center mb-8 md:mb-0">
+  <h1 class="text-3xl md:text-4xl font-extrabold text-blue-800 mt-6 text-center">
+    Presentación Profesional <span class="text-gray-700">|</span> 
+    <span class="text-black dark:text-white">Gabriel Iturre</span> 
+    <span class="text-gray-500">- Full Stack Dev</span>
+  </h1>
+
+  <!-- Video de YouTube debajo de la foto -->
+  <div class="mt-6 w-full md:w-[820px] aspect-video rounded-xl overflow-hidden shadow-xl border-4 border-blue-800">
+    <iframe 
+      class="w-full h-full"
+      src="https://www.youtube.com/embed/j78UH984PNQ?rel=0"
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Botones debajo de la foto -->
+  <div class="mt-6 flex flex-col md:flex-row gap-4 w-full justify-center">
+    <a 
+      href="https://drive.google.com/file/d/1e78lOPjsbZjpki-vT_EZTDjqXNi5Jsvj/view?usp=sharing"
+      target="_blank"
+      class="py-3 px-8 text-center font-bold rounded-lg bg-blue-800 text-white shadow-md transition duration-300 hover:bg-blue-700 block mt-2">
+      Curriculum
+    </a>
+
+    <a 
+      href="https://gabrieliturre.hashnode.dev/" target="_blank"
+      class="py-3 px-8 text-center font-bold rounded-lg bg-gray-700 text-white shadow-md transition duration-300 hover:bg-gray-600 block mt-2">
+      Blog
+    </a>  
+  </div>
+
+  <!-- Redes Sociales debajo de los botones -->
+  <div class="flex items-center space-x-6 mt-6 justify-center md:justify-center">
+    <a href="https://www.tiktok.com/@gapherdev?is_from_webapp=1&sender_device=pcm" class="neon-circle" target="_blank">
+      <img src="images/tik-tok.png" alt="TikTok">
+    </a>
+    <a href="https://www.linkedin.com/in/gabriel-iturre-73900626a/" class="neon-circle" target="_blank">
+      <img src="images/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://www.github.com" class="neon-circle" target="_blank">
+      <img src="images/github (1).png" alt="GitHub">
+    </a>
+  </div>
+</div>
 <!-- Sección Educación -->
 <section class="education-section mt-16 bg-gray-900  p-8 w-full max-w-6xl mx-auto" id="educacion">
 
@@ -945,7 +993,7 @@
     <div class="star"></div>
     <!-- Agregar más divs de .star si deseas más estrellas -->
   </div>
-  <h2 class="text-5xl font-bold text-blue-400">Mi Educación</h2>
+  <h2 class="text-5xl font-bold text-blue-800">Mi Educación</h2>
   <p class="text-gray-400 mt-4">
     A lo largo de mi trayectoria he adquirido conocimientos en diversas tecnologías y herramientas que me han permitido crecer como profesional en desarrollo web y programación.
   </p>
@@ -953,10 +1001,10 @@
   <div class="education-cards grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 overflow-y-auto max-h-96 pr-4">
     <!-- Tarjeta 1 -->
     <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-      <p class="text-blue-400 font-semibold text-lg">2024</p>
+      <p class="text-blue-800 font-semibold text-lg">2024</p>
       <h3 class="text-2xl font-bold text-white mt-2">TodoCode - HTML y CSS</h3>
       <div class="flex items-center mt-2">
-        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <span class="w-3 h-3 rounded-full bg-blue-800 mr-2"></span>
         <p class="text-gray-400">Curso Online</p>
       </div>
       <p class="text-gray-300 mt-4">
@@ -966,10 +1014,10 @@
 
     <!-- Tarjeta 2 -->
     <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-      <p class="text-blue-400 font-semibold text-lg">2022 - 2025</p>
+      <p class="text-blue-800 font-semibold text-lg">2022 - 2025</p>
       <h3 class="text-2xl font-bold text-white mt-2">Facultad de Ingeniería - UNJu</h3>
       <div class="flex items-center mt-2">
-        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <span class="w-3 h-3 rounded-full bg-blue-800 mr-2"></span>
         <p class="text-gray-400">Analista Programador Universitario</p>
       </div>
       <p class="text-gray-300 mt-4">
@@ -979,10 +1027,10 @@
 
     <!-- Tarjeta 3  3333--> 
     <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-      <p class="text-blue-400 font-semibold text-lg">2022</p>
+      <p class="text-blue-800 font-semibold text-lg">2022</p>
       <h3 class="text-2xl font-bold text-white mt-2">Argentina Programa</h3>
       <div class="flex items-center mt-2">
-        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <span class="w-3 h-3 rounded-full bg-blue-800 mr-2"></span>
         <p class="text-gray-400">JavaScript</p>
       </div>
       <p class="text-gray-300 mt-4">
@@ -992,10 +1040,10 @@
 
     <!-- Tarjeta 4 -->
     <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-      <p class="text-blue-400 font-semibold text-lg">2024</p>
+      <p class="text-blue-800 font-semibold text-lg">2024</p>
       <h3 class="text-2xl font-bold text-white mt-2">Universidad Desarrollo Web - Udemy</h3>
       <div class="flex items-center mt-2">
-        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <span class="w-3 h-3 rounded-full bg-blue-800 mr-2"></span>
         <p class="text-gray-400">FrontEnd Web Developer</p>
       </div>
       <p class="text-gray-300 mt-4">
@@ -1008,7 +1056,7 @@
       <p class="text-blue-400 font-semibold text-lg">2025</p>
       <h3 class="text-2xl font-bold text-white mt-2">Universidad Angular - Udemy</h3>
       <div class="flex items-center mt-2">
-        <span class="w-3 h-3 rounded-full bg-blue-400 mr-2"></span>
+        <span class="w-3 h-3 rounded-full bg-blue-800 mr-2"></span>
         <p class="text-gray-400">De Cero a Experto</p>
       </div>
       <p class="text-gray-300 mt-4">
