@@ -145,6 +145,7 @@
         </a>
     
   </div>
+  
 </div>
       
 <!-- Botón CV -->
@@ -361,12 +362,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <div class="container mx-auto py-12 px-4">
-  <h2 class="text-3xl font-bold text-blue-800 text-center">Últimos Proyectos</h2>
+  <h2 class="text-3xl font-bold text-blue-800 text-center" id="proyectos">Últimos Proyectos</h2>
   
   <!-- Checkbox hack para mostrar/ocultar proyectos -->
   <input type="checkbox" id="ver-mas-toggle" class="hidden">
   
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 max-w-5xl mx-auto">
+
+  
     <!-- Proyecto 1 -->
     <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-xl h-full">
       <!-- Carrusel de imágenes -->
@@ -442,7 +445,80 @@
         </a>
       </div>
     </div>
+    <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-xl h-full">
+      <!-- Carrusel de imágenes -->
+      <div class="w-full relative mb-4">
+        <div class="carousel-container relative w-full h-48 overflow-hidden rounded-md">
+          <div class="carousel-images" id="carousel-pasajes">
+            <img src="images/pasajes1.PNG" alt="Juego Ahorcados" class="w-full h-full object-cover shadow-md">
+            <img src="images/pasajes2.PNG" alt="Juego Ahorcados" class="w-full h-full object-cover shadow-md">
+            <img src="images/pasajes4.PNG" alt="Juego Ahorcados" class="w-full h-full object-cover shadow-md">
+          </div>
     
+          <!-- Controles del carrusel -->
+          <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 rounded-full hover:bg-black/70" data-carousel="carousel-pasajes">
+            <i class="fas fa-chevron-left h-5 w-5"></i>
+          </button>
+          <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 rounded-full hover:bg-black/70" data-carousel="carousel-pasajes">
+            <i class="fas fa-chevron-right h-5 w-5"></i>
+          </button>
+    
+          <!-- Indicadores del carrusel -->
+          <div class="carousel-indicators absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-1">
+            <div class="h-1.5 w-1.5 rounded-full bg-white carousel-indicator active" data-carousel="carousel-pasajes" data-index="0"></div>
+            <div class="h-1.5 w-1.5 rounded-full bg-white/50 carousel-indicator" data-carousel="carousel-pasajes" data-index="1"></div>
+            <div class="h-1.5 w-1.5 rounded-full bg-white/50 carousel-indicator" data-carousel="carousel-pasajes" data-index="2"></div>
+          </div>
+        </div>
+      </div>
+    
+      <h3 class="text-xl font-semibold text-white text-center">Sistema Venta de Pasajes</h3>
+      <p class="text-sm text-gray-300 mt-4 text-center">
+        Aplicación web para una empresa de turismo que permite registrar boletos, calcular descuentos según la categoría del pasajero y mostrar un resumen de ventas. Desarrollada con Angular, incluye formulario interactivo, servicios para CRUD y visualización con data tables.
+      </p>
+    
+      <!-- Tecnologías usadas -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-4">
+        <div class="flex items-center">
+          <img src="images/html.png" alt="HTML" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">HTML</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/css-3.png" alt="CSS" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">CSS</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/icons8-oreja-480.png" alt="Bootstrap" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">Bootstrap</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/icons8-mecanografiado-48.png" alt="TypeScript" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">TypeScript</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/icons8-figura-240.png" alt="Figma" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">Figma</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/icons8-angular-500.png" alt="Angular" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">Angular</p>
+        </div>
+        <div class="flex items-center">
+          <img src="images/icons8-nodejs-240.png" alt="Node.js" class="w-6 h-6 mr-2">
+          <p class="text-sm text-gray-300">Node.js</p>
+        </div>
+      </div>
+    
+      <!-- Botones -->
+      <div class="flex flex-col w-full gap-2 mt-auto pt-6">
+        <a href="https://sistemagabipasajes.netlify.app/SistemaPasajes" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition w-full text-center">
+          Ver Sitio Web
+        </a>
+        <a href="https://github.com/GabrielIturreCs/Sistema-de-Pasajes" target="_blank" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition w-full text-center">
+          Ver Repositorio
+        </a>
+      </div>
+    </div>
     <!-- Proyecto 2 -->
     <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center transform transition-transform duration-300 hover:translate-y-[-10px] hover:shadow-xl h-full">
       <!-- Carrusel de imágenes -->
